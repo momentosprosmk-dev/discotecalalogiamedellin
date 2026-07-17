@@ -1,0 +1,36 @@
+/* contacto.css */
+
+/* Opciones de contacto */
+.contacto-opciones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-top: 20px;
+}
+/* Botones de contacto elegantes */
+.contacto-btn {
+  width: 85%;
+  max-width: 320px;
+  display: block;
+  background: linear-gradient(135deg, #111, #222);
+  border: 1px solid #444;
+  padding: 14px 22px;
+  border-radius: 12px;
+  margin: 10px auto;
+  color: var(--blanco);
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.6);
+}
+.contacto-btn:hover {
+  background: linear-gradient(135deg, #222, var(--gris-oscuro));
+  border-color: var(--rojo);
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px rgba(200,50,50,0.5), 0 4px 12px rgba(0,0,0,0.8);
+}
+

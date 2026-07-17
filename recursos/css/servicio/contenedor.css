@@ -1,0 +1,23 @@
+/* contenedor.css | Contenedor dinámico de HTML hijos*/
+.badge-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+/* ================================ RESPONSIVE ================================ */
+/* Pantallas menores a 1024px (Movil) */
+@media (max-width: 1024px) {
+
+}
+
+/* Pantallas mayores a 1024px (PC) */
+@media (min-width: 1024px) {
+  .badge-container {
+    display: none;
+  }
+}

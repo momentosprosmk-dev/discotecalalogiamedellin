@@ -1,0 +1,146 @@
+/*=============== Estructura general de espacios ===============*/
+.tabla-div {
+  width: 100%;
+  margin: 0 auto;
+  aspect-ratio: 35 / 101;
+  display: grid;
+  grid-template-columns: repeat(35, 1fr);
+  grid-template-rows: repeat(101, 1fr);
+  border: 2px solid #000;
+}
+
+.celda {
+  background-color: #e0e0e0;
+
+}
+
+/*=============== Overlay y contenedor de tabla ===============*/
+#tabla-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/*=============== Celdas unidas por tipo de espacio ===============*/
+.cu-l a, .cu-t a, .cu-bl a, .cu-b a, .cu-bc a, .cu-p a, .cu-g a,
+.cu-bphm a, .cu-esc-u a, .cu-esc-d a, .cu-esc-l a, .cu-esc-r a,
+.cu-esc-descanso a, .cu-rn a, .cu-rg a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  box-sizing: border-box;
+  padding: 2px;
+  line-height: 1.2;
+  white-space: normal;
+  word-break: keep-all;
+  overflow: hidden;
+  max-height: 100%;
+}
+
+/* Lobby */
+.cu-l a {
+  background-color: #cf6e6f;
+  border: 1px solid #cf6e6f;
+  color: #000;
+}
+.cu-l a:hover { transform: scale(1.03); cursor: pointer; }
+.cu-l a:active { background-color: #f87171; transform: scale(1.06); }
+
+/* Tarima */
+.cu-t a, .cu-bl a {
+  background-color: #902f30;
+  border: 1px solid #902f30;
+  color: #fff;
+}
+.cu-t a { font-size: clamp(0.78rem, 2vw, 18px); }
+.cu-bl a { font-size: clamp(9px, 2vw, 18px); }
+.cu-t a:hover, .cu-bl a:hover { transform: scale(1.03); cursor: pointer; }
+.cu-t a:active, .cu-bl a:active { background-color: #f87171; transform: scale(1.06); }
+
+/* Barra y consumo */
+.cu-b a, .cu-bc a {
+  background-color: #d1b04b;
+  border: 1px solid #d1b04b;
+  color: #000;
+}
+.cu-b a { font-size: clamp(13px, 2vw, 18px); }
+.cu-bc a { font-size: clamp(9.5px, 2vw, 18px); }
+.cu-b a:hover, .cu-bc a:hover { transform: scale(1.03); cursor: pointer; }
+.cu-b a:active, .cu-bc a:active { transform: scale(1.06); }
+
+/* Palco y General */
+.cu-p a {
+  background-color: #e6c76a;
+  border: 1px solid #d1b04b;
+  color: #000;
+  font-size: clamp(0.78rem, 2vw, 18px);
+}
+.cu-g a {
+  background-color: #ffe494;
+  border: 1px solid #e6c76a;
+  color: #000;
+  font-size: clamp(0.78rem, 2vw, 18px);
+}
+.cu-p a:hover, .cu-g a:hover { transform: scale(1.03); cursor: pointer; }
+.cu-p a:active, .cu-g a:active { transform: scale(1.06); }
+
+/* Baño primer piso */
+.cu-bphm a {
+  background-color: #555555;
+  border: 1px solid #555555;
+  color: #FFF;
+  font-size: clamp(0.78rem, 2vw, 18px);
+}
+
+/* Escaleras */
+.cu-esc-descanso a,
+.cu-esc-u a,
+.cu-esc-d a,
+.cu-esc-l a,
+.cu-esc-r a {
+  background-color: #e0e0e0;
+  border: 1px solid #bbb;
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+.cu-esc-descanso a { background-color: #dcdcdc; }
+.cu-esc-u a { box-shadow: inset 0 2px 0 #ccc; }
+.cu-esc-d a { box-shadow: inset 0 -2px 0 #ccc; }
+.cu-esc-l a { box-shadow: inset 2px 0 0 #ccc; }
+.cu-esc-r a { box-shadow: inset -2px 0 0 #ccc; }
+
+/* Relleno */
+.cu-rn a {
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+.cu-rg a {
+  background-color: #808080;
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+  box-sizing: border-box;
+}

@@ -1,0 +1,127 @@
+/* base.css | Estilos de licores */
+
+/* ================================ ESTRUCTURA GENERAL DEL ARCHIVO ================================ */
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/* ================================ CONTENEDOR PRINCIPAL ================================ */
+/*Sección principal*/
+.section-scroll {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: var(--footer-height);
+}
+/* Wrapper interno para centrar y separar los items */
+.menu-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+/* ================================ ÍTEM ================================ */
+/* Items */
+.item {
+  background: #111;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(229, 9, 20, 0.6);
+  width: 100%;
+  padding: 15px;
+  color: #f4f4f4;
+}
+.item h3 {
+  margin: 0;
+  color: #e50914;
+  font-size: var(--form-licores-font-size-titulo);
+  text-align: left;
+}
+.tipo {
+  color: #666;
+  font-size: var(--form-licores-font-size-tipo);
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+.item-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+.item-left img {
+  width: var(--form-licores-width-img);
+  height: var(--form-licores-height-img);
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+.item-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+.item-right .descripcion {
+  font-size: var(--form-licores-font-size-descripcion);
+  color: #ccc;
+  margin: 0;
+  text-align: left;
+  flex-grow: 1;
+}
+.item-right .price {
+  font-weight: bold;
+  color: #ff4444;
+  font-size: var(--form-licores-font-size-precio);
+  text-align: right;
+  align-self: flex-end;
+}
+/* ================================ RESPONSIVE ================================ */
+/* Pantallas menores a 1024px (Movil) */
+@media (max-width: 1024px) {
+  .logo {
+    display: none;
+  }
+  .section-scroll {
+    overflow-y: auto;
+    max-height: 100vh;
+  }
+  .item {
+    max-width: 95%;
+    padding: 10px;
+    height: auto;
+  }
+  .item-right {
+    height: auto;
+  }
+}
+
+/* Pantallas mayores a 1024px (PC) */
+@media (min-width: 1024px) {
+  body {
+    height: auto;
+    display: block;
+  }
+  .section-scroll {
+    overflow-y: visible;
+    height: auto;
+    margin-bottom: 0;
+    padding-bottom: 80px;
+  }
+  /* Layout en cuadrícula */
+  .menu-inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); 
+    gap: 30px;
+    justify-items: center;
+    align-items: start;
+  }
+  .item {
+    width: 90%;
+    height: 250px;
+  }
+}
+
+

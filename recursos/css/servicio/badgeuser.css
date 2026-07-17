@@ -1,0 +1,173 @@
+/* badgeuser.css | HTML badgen NN*/
+
+/* ================================ ESTRUCTURA GLOBAL ================================ */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url("../../media/servicio/badgeuser.avif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ================================ TARJETA PRINCIPAL ================================ */
+.business-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: calc(100vh - 420px);
+  max-width: 100%;
+  margin: 0;
+  color: var(--gris-claro);
+  background-blend-mode: multiply;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+/* ================================ FOTO DEL USUARIO ================================ */
+.user-photo {
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+}
+.user-photo img {
+  width: 150px;
+  height: 150px;
+  border: 3px solid #d62828;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(214,40,40,0.4);
+}
+
+/* ================================ INFORMACIÓN DE USUARIO ================================ */
+.user-info {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.user-info h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin: 0.5rem 0 0;
+  color: var(--gris-claro);
+}
+.user-info h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin: 0.2rem 0;
+  color: var(--gris-claro);
+  display: inline-block;
+  padding: 0.6rem 3.2rem;
+  border-radius: 6px;
+  background: linear-gradient(
+    to right,
+    rgba(179, 0, 0, 0),
+    rgba(179, 0, 0, 0.7) 20%, 
+    #b30000 40%, 
+    #b30000 60%, 
+    rgba(179, 0, 0, 0.7) 80%, 
+    rgba(179, 0, 0, 0)
+  );
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-image: linear-gradient(
+    to right,
+    rgba(179, 0, 0, 0),
+    #ff0000,
+    rgba(179, 0, 0, 0)
+  ) 1;
+}
+
+/* ================================ CONTENEDOR DE QR'S ================================ */
+.qr-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  z-index: 1000;
+}
+/* Scrollbar personalizado */
+.qr-container::-webkit-scrollbar {
+  height: 6px;
+}
+.qr-container::-webkit-scrollbar-track {
+  background: #111;
+}
+.qr-container::-webkit-scrollbar-thumb {
+  background: #c61111;
+  border-radius: 5px;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+.qr-container::-webkit-scrollbar-thumb:hover {
+  background: #f20606;
+}
+
+/* ================================ TARJETA QR ================================ */
+.qr-card.small {
+  flex: 0 0 100%;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  scroll-snap-align: center;
+  padding: 0;
+}
+/* Descripción fija en la parte superior */
+.qr-description {
+  font-family: 'Raleway', sans-serif;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  color: var(--gris-claro);
+  text-align: center;
+  margin: 0;
+  padding-top: 0.2rem;
+}
+/* Imagen fija al fondo del contenedor */
+.qr-card.small img {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 170px;
+  height: 170px;
+  border: 3px solid #c00;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+
+.qr-card.small img:hover {
+  transform: translateX(-50%) scale(1.15);
+}
+/* Títulos debajo de cada QR */
+.qr-titulo {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  margin: 0;
+  color: #fff;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+  width: 80%;
+  text-align: center;
+  padding: 0.4rem 0;
+}
+
+

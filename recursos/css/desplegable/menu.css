@@ -1,0 +1,90 @@
+/*menu.css*/
+
+/*=============== Menú lateral de opciones ===============*/
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  width: 100%;
+  min-height: calc(100dvh - var(--header-height));
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 998;
+}
+.overlay.visible {
+  opacity: 1;
+  visibility: visible;
+}
+/* Menu desplegable | General*/
+.menu-opciones {
+  position: fixed;
+  top: var(--header-height);
+  right: 0;
+  width: 300px;
+  max-height: calc(100% - 50px);
+  background: var(--gris-oscuro);
+  color: var(--blanco);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+}
+.menu-opciones.visible {
+  transform: translateX(0);
+}
+.menu-opciones ul {
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+}
+.menu-opciones ul li {
+  margin: 0.3rem 0;
+  border-bottom: 1px solid var(--gris);
+}
+.menu-opciones ul li:last-child {
+  border-bottom: none;
+}
+/* Menu desplegable | Botones*/
+.bt-opc {
+  display: block;
+  color: var(--blanco-oscuro);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+  padding: 0.9rem 0.8rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+}
+.bt-opc:hover {
+  color: var(--rojo-oscuro);
+  transform: translateX(6px);
+  font-weight: 600;
+}
+.menu-footer {
+  padding: 1rem;
+  font-size: 1rem;
+  border-top: 2px solid var(--gris-oscuro);
+  text-align: center;
+  background: var(--gris-oscuro);
+  color: var(--blanco);
+}
+
+/* ================================ RESPONSIVE ================================ */
+/* Desactiva Hover en pantallas táctiles */
+@media (hover: none) {
+  .btn-opciones:hover {
+    background: none !important;
+    color: #eae5e5 !important;
+    border: none !important;
+    transform: none !important;
+  }
+}
+
+
+

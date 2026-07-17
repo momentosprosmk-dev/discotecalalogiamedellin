@@ -1,0 +1,65 @@
+/* botonWhatsApp.css */
+
+/* Contenedor del botón */
+.whatsapp-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Estado inactivo */
+#submitBtn.inactivo {
+  background-color: #9bd8b5;
+  color: var(--blanco);
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: not-allowed;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+}
+
+/* Estado activo */
+#submitBtn.activo {
+  background-color: #25D366;
+  color: var(--blanco);
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#submitBtn.activo:hover {
+  background-color: #20b858;
+  transform: scale(1.05);
+}
+
+#submitBtn i {
+  font-size: 20px;
+}
+
+/* ================================ RESPONSIVE ================================ */
+/* Pantallas menores a 1024px (Móvil) */
+@media (max-width: 1024px) {
+  #submitBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Pantallas mayores a 1024px (PC) */
+@media (min-width: 1024px) {
+  #submitBtn {
+    min-width: 220px;
+  }
+}

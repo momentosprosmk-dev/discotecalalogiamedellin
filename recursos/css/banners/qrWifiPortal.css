@@ -1,0 +1,30 @@
+/* qrWifiPortal.css | Banner de QR Wi-Fi */
+
+/* Imagen QR (Wi-Fi y Compartir página) */
+.qr-img {
+  width: 280px;
+  height: 280px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 14px;
+  padding: 8px;
+  background: linear-gradient(135deg, #111, var(--negro-claro));
+  box-shadow: 0 4px 14px rgba(0,0,0,0.8), 0 0 12px rgba(200,50,50,0.4);
+  border: 1px solid rgba(200,50,50,0.5);
+}
+/* Texto dentro de banners QR */
+.banner-qr p {
+  margin: 8px 0;
+  font-size: 1.1rem;
+  color: var(--blanco);
+  text-align: center;
+}
+.banner-qr span {
+  font-weight: 600;
+  color: var(--rojo);
+  letter-spacing: 0.5px;
+  background: rgba(0,0,0,0.4);
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+

@@ -1,0 +1,142 @@
+<!-- index.html | Portal - La Logia-->
+ 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Portal - La Logia</title>
+  <link rel="shortcut icon" href="recursos/media/global/favicon_discoteca_la_logia.ico" type="image/x-icon" />
+  <link rel="icon" href="recursos/media/global/favicon_discoteca_la_logia.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="recursos/css/global/base.css">
+  <link rel="stylesheet" href="recursos/css/global/header.css">
+  <link rel="stylesheet" href="recursos/css/global/footer.css">
+  <link rel="stylesheet" href="recursos/css/global/scrollVertical.css">
+  <link rel="stylesheet" href="recursos/css/index/movil.css">
+  <link rel="stylesheet" href="recursos/css/index/pc.css">
+  <style>
+  html, body {
+    background-color: #000000;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+  }
+  </style>
+</head>
+<body>
+  <!-- Header | General -->
+  <header class="header">
+    <div class="logo"><img src="recursos/media/global/logo_discoteca_la_logia.avif"></div>
+    <button id="btn-menu" class="menu-btn no-active">☰</button>
+    <nav class="nav">
+      <ul>
+        <li><a href="carta/categorias/" class="bt-opc">Ver carta</a></li>
+        <li><a href="formularios/reservar/" class="bt-opc">Reservar</a></li>
+        <li><a href="ubicacion/" class="bt-opc">Ubícanos</a></li>
+        <li><a href="https://discotecalalogia.com/" class="bt-opc">Página Web</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- Hero | Presentación -->
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <!-- Columna izquierda: QR -->
+      <div class="hero-left">
+        <div class="qr-box">
+          <img src="recursos/media/global/qr_maps_discoteca_la_logia.avif" alt="QR Google Maps">
+          <span>Deja tu reseña</span>
+        </div>
+        <div class="qr-box">
+          <img src="recursos/media/global/qr_portal_discoteca_la_logia.avif" alt="QR Portal">
+          <span>Escanea y entra</span>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="btn-group">
+          <a href="carta/categorias/" class="btn-primary">Ver carta</a>
+          <a href="formularios/reservar/" class="btn-primary btn-primary-conct">Reservar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overlay - Efecto de transparencia -->
+  <div id="overlay" class="overlay"></div>
+
+  <!-- Contenedor - Opciones -->
+  <div id="menu-container"></div>
+
+  <!-- Contenedor de imagenes para carta en movil -->
+  <section class="section-scroll">
+    <div class="imagenes-carta">
+      <img src="https://momentosprosmk-dev.github.io/discotecalalogia-med-media/recursos/media/carta/verCartaCompleta/discotecalalogia.com.1.avif" 
+          alt="Imagen 1" 
+          class="imagen-normal" />
+
+      <div class="zoom-container">
+        <img src="https://momentosprosmk-dev.github.io/discotecalalogia-med-media/recursos/media/carta/verCartaCompleta/discotecalalogia.com.2.avif" 
+            alt="Imagen 2 - Zoom" 
+            class="imagen-zoom" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer | Portal La Logia -->
+  <footer>
+    <section class="footer-movil">
+      <a href="carta/categorias/" class="btn-footer">Categorías</a>
+      <a href="carta/cocteles/" class="btn-footer">Cocteles</a>
+    </section>
+
+    <section  class="footer-pc">
+      <div class="footer-container">
+        <!-- Logo - Marca -->
+        <div class="footer-brand">
+          <img src="recursos/media/global/footer_discoteca_la_logia.avif" alt="Logo MomentosPro" class="footer-brand-logo">
+          <div class="footer-brand-text">
+            <p>· La Hermandad Del Perreo ·</p>
+          </div>
+        </div>
+        <!-- Navegación rápida -->
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="carta/categorias/">Ver carta</a></li>
+            <li><a href="formularios/reservar/">Reservar</a></li>
+            <li><a href="ubicacion/">Ubícanos</a></li>
+            <li><a href="https://discotecalalogia.com/">Página Web</a></li>
+          </ul>
+        </nav>
+        <!-- Redes sociales -->
+        <div class="footer-social">
+          <a data-link="btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a data-link="btn-facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a data-link="btn-instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <!-- Derechos reservados -->
+      <div id="texto-footer" class="footer-copyright"></div>
+    </section>
+  </footer>
+
+  <!-- Contenedor - Banner de Términos y Condiciones -->
+  <div id="tyc-container"></div>
+
+  <!-- Scripts - Recursos -->
+  <script>var basePath = "";</script>
+  <script src="recursos/js/global/gateway.js"></script>
+  <script src="recursos/js/global/copyright.js"></script>
+
+  <!-- Scripts - Banner de Términos y Condiciones -->
+  <script src="smk/recursos/js/tyc/validadorTyc.js"></script>
+
+  <!-- Scripts - Opciones -->
+  <script src="recursos/js/desplegable/modulesMenu.js"></script>
+  <script src="recursos/js/desplegable/menuLoader.js"></script>
+
+  <!-- Scripts - Banners -->
+  <script src="recursos/js/global/eventsLoader.js"></script>
+
+</body>
+</html>

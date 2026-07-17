@@ -1,0 +1,24 @@
+/*contenedor.css | Contenedor de TyC*/
+
+
+/*=============== Contenedor de TyC ===============*/
+.contenedor {
+  width: 100%;
+  height: calc(100vh - var(--altura-footer));
+  background-color: rgba(255, 255, 255, 0.05);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: var(--espaciado);
+}
+
+/* Iframe web */
+.visor,
+iframe.visor {
+  flex: 1;
+  width: 100%;
+  border: none;
+  display: block;
+  overflow-y: auto;
+}
+

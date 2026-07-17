@@ -1,0 +1,110 @@
+/* badgenn.css | HTML badgen NN*/
+
+/* ================================ ESTRUCTURA GLOBAL ================================ */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+/* Contenedor principal debajo del header */
+.main-content {
+  height: calc(100dvh - var(--header-height));
+  background-image: url("../../media/servicio/badgenn.avif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================================ CONTENEDOR DE QR'S ================================ */
+.qr-container {
+  flex: 1;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  background: transparent;
+}
+
+/* Scroll horizontal personalizado para QR */
+.qr-container::-webkit-scrollbar {
+  height: 12px;
+}
+.qr-container::-webkit-scrollbar-track {
+  background: #111;
+}
+.qr-container::-webkit-scrollbar-thumb {
+  background: #c61111;
+  border-radius: 5px;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+.qr-container::-webkit-scrollbar-thumb:hover {
+  background: #f20606;
+}
+
+/* Diseño del contenedor */
+.qr-card {
+  position: relative;
+  flex: 0 0 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  border: 0;
+  border-radius: 0;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+.qr-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  border-radius: inherit;
+}
+.qr-card * {
+  position: relative;
+}
+
+/* Diseño de las img QR */
+.qr-card img {
+  width: 210px;
+  height: 210px;
+  margin-bottom: 0.5rem;
+  border: 4px solid #c00;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+.qr-card img:hover {
+  transform: scale(1.25);
+}
+
+/* Diseño de los títulos de QR */
+.qr-card p {
+  color: var(--blanco);
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin: 0 0 2rem 0;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+/* ================================ RESPONSIVE ================================ */
+/* Pantallas menores a 1024px (Movil) */
+@media (max-width: 1024px) {
+}
+
+/* Pantallas mayores a 1024px (PC) */
+@media (min-width: 1024px) {
+}

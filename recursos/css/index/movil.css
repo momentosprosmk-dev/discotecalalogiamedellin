@@ -1,0 +1,75 @@
+/*movil.css*/
+
+/* ================================ MOVIL ================================ */
+/*Contenedor con scroll*/
+.section-scroll {
+  position: fixed;
+  top: var(--header-height);
+  bottom: var(--footer-height);
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+}
+/* Wrapper interno */
+.imagenes-carta {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: stretch;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+
+}
+/* Imagen normal */
+.imagen-normal {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* Contenedor con scroll para zoom */
+.zoom-container {
+  width: 100%;
+  height: fit-content;
+  overflow: hidden;
+}
+/* Imagen con zoom (estado normal) */
+.imagen-zoom {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
+  transform: none;
+}
+/* Estado ampliado con doble clic/doble toque */
+.imagen-zoom.zoomed {
+  transform: scale(2);
+  cursor: grab;
+}
+/* Cuando hay zoom, permitir scroll en ambas direcciones */
+.zoom-container:has(.imagen-zoom.zoomed) {
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+/* ================================ RESPONSIVE ================================*/
+/* Pantallas menores a 1024px (Movil) */
+@media (max-width: 1024px) {
+  .section-scroll {
+    display: block;
+  }
+
+  .imagen-normal,
+  .zoom-container {
+    width: 100%;
+  }
+}
+
+/* Pantallas mayores a 1024px (PC) */
+@media (min-width: 1024px) {
+  .section-scroll {
+    display: none;
+  }
+}

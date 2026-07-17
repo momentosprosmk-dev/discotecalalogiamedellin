@@ -1,0 +1,458 @@
+<!-- index.html | Nivel 2 -->
+
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Templo - Segundo Piso</title>
+  <link rel="icon" href="../../recursos/media/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../../recursos/css/espacios/espacios.css" />
+  <link rel="stylesheet" href="../../recursos/css/espacios/estructura.css" />
+  <style>
+  html, body {
+    background-color: #000000;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+  }
+  </style>
+</head>
+
+<body>
+  <!-- Contenedor para el banner de Términos y Condiciones -->
+  <div id="tyc-container"></div>
+
+  <!-- Contenedor del plano institucional -->
+  <div id="plano-container">
+    <div style="position: relative;">
+      <div id="tabla" class="tabla-div"></div>
+      <svg id="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;"></svg>
+    </div>
+  </div>
+
+  <!-- Navegación inferior fija -->
+  <div class="barra-navegacion">
+    <div class="nav-contenedor">
+      <a href="../../" class="nav-btn">Inicio</a>
+      <a href="../nivel_1/" class="nav-btn">Nivel 1</a>
+      <a href="../nivel_2/" class="nav-btn activo">Nivel 2</a>
+    </div>
+  </div>
+
+  
+  <!-- Overlay oscuro + todos los banners -->
+  <div id="banner-overlay" class="overlay">
+    <!-- Banner: Lobby1 -->
+    <div id="bnlobby1" class="banner-fotos" style="display: none;">
+      <h2 class="titulo-banner">Lobby</h2>
+      <div class="carrusel" data-carrusel="lobby1">
+        <button class="flecha izquierda">❮</button>
+        <div class="imagen-contenedor">
+          <img src="../../recursos/media/espacios/bnlobby1/1.avif" alt="Imagen 1 - Lobby" class="imagen-activa" />
+          <img src="../../recursos/media/espacios/bnlobby1/2.avif" alt="Imagen 2 - Lobby" />
+        </div>
+        <button class="flecha derecha">❯</button>
+      </div>
+      <div class="botones-banner">
+        <button class="cerrar-banner" onclick="cerrarBanner('bnlobby1')">Cerrar</button>
+      </div>
+    </div>
+
+    <!-- Banner: Tarima -->
+    <div id="bntarima1" class="banner-fotos" style="display: none;">
+      <h2 class="titulo-banner">Tarima</h2>
+      <div class="carrusel" data-carrusel="tarima1">
+        <button class="flecha izquierda">❮</button>
+        <div class="imagen-contenedor">
+          <img src="../../recursos/media/espacios/bntarima1/1.avif" alt="Imagen 1 - Tarima" class="imagen-activa" />
+          <img src="../../recursos/media/espacios/bntarima1/2.avif" alt="Imagen 2 - Tarima" />
+        </div>
+        <button class="flecha derecha">❯</button>
+      </div>
+      <div class="botones-banner">
+        <button class="cerrar-banner" onclick="cerrarBanner('bntarima1')">Cerrar</button>
+      </div>
+    </div>
+
+    <!-- Banner: Balcón 1 -->
+    <div id="bnbalcon1" class="banner-fotos" style="display: none;">
+      <h2 class="titulo-banner">Balcón 1</h2>
+      <div class="carrusel" data-carrusel="balcon1">
+        <button class="flecha izquierda">❮</button>
+        <div class="imagen-contenedor">
+          <img src="../../recursos/media/espacios/bnbalcon1/1.avif" alt="Imagen 1 - Balcón 1" class="imagen-activa" />
+          <img src="../../recursos/media/espacios/bnbalcon1/2.avif" alt="Imagen 2 - Balcón 1" />
+        </div>
+        <button class="flecha derecha">❯</button>
+      </div>
+      <div class="botones-banner">
+        <button class="cerrar-banner" onclick="cerrarBanner('bnbalcon1')">Cerrar</button>
+      </div>
+    </div>
+
+    <!-- Banner: Balcón 2 -->
+    <div id="bnbalcon2" class="banner-fotos" style="display: none;">
+      <h2 class="titulo-banner">Balcón 2</h2>
+      <div class="carrusel" data-carrusel="balcon2">
+        <button class="flecha izquierda">❮</button>
+        <div class="imagen-contenedor">
+          <img src="../../recursos/media/espacios/bnbalcon2/1.avif" alt="Imagen 1 - Balcon 2" class="imagen-activa" />
+          <img src="../../recursos/media/espacios/bnbalcon2/2.avif" alt="Imagen 2 - Balcon 2" />
+        </div>
+        <button class="flecha derecha">❯</button>
+      </div>
+      <div class="botones-banner">
+        <button class="cerrar-banner" onclick="cerrarBanner('bnbalcon2')">Cerrar</button>
+      </div>
+    </div>
+
+    <!-- Banner: Barra - Segundo piso -->
+    <div id="bnbarra2" class="banner-fotos" style="display: none;">
+      <h2 class="titulo-banner">Barra - Segundo piso</h2>
+      <div class="carrusel" data-carrusel="barra2">
+        <button class="flecha izquierda">❮</button>
+        <div class="imagen-contenedor">
+          <img src="../../recursos/media/espacios/bnbarra2/1.avif" alt="Imagen 1 - Barra - Segundo piso" class="imagen-activa" />
+          <img src="../../recursos/media/espacios/bnbarra2/2.avif" alt="Imagen 2 - Barra - Segundo piso" />
+        </div>
+        <button class="flecha derecha">❯</button>
+      </div>
+      <div class="botones-banner">
+        <button class="cerrar-banner" onclick="cerrarBanner('bnbarra2')">Cerrar</button>
+      </div>
+    </div>
+
+    <!-- Banner: Barra de consumo -->
+    <div id="bnbarrac1" class="banner-fotos" style="display: none;">
+      <h2 class="titulo-banner">Barra de consumo</h2>
+      <div class="carrusel" data-carrusel="barrac1">
+        <button class="flecha izquierda">❮</button>
+        <div class="imagen-contenedor">
+          <img src="../../recursos/media/espacios/bnbarrac1/1.avif" alt="Imagen 1 - Barra de consumo" class="imagen-activa" />
+          <img src="../../recursos/media/espacios/bnbarrac1/2.avif" alt="Imagen 2 - Barra de consumo" />
+        </div>
+        <button class="flecha derecha">❯</button>
+      </div>
+      <div class="botones-banner">
+        <button class="cerrar-banner" onclick="cerrarBanner('bnbarrac1')">Cerrar</button>
+      </div>
+    </div>
+
+    <!-- Banner: Palco 10 -->
+    <div id="bnpalco10" class="banner-fotos" style="display: none;">
+      <h2 class="titulo-banner">Palco 10</h2>
+      <div class="carrusel" data-carrusel="palco10">
+        <button class="flecha izquierda">❮</button>
+        <div class="imagen-contenedor">
+          <img src="../../recursos/media/espacios/bnpalco10/1.avif" alt="Imagen 1 - Palco 10" class="imagen-activa" />
+          <img src="../../recursos/media/espacios/bnpalco10/2.avif" alt="Imagen 2 - Palco 10" />
+        </div>
+        <button class="flecha derecha">❯</button>
+      </div>
+      <div class="botones-banner">
+        <button class="cerrar-banner" onclick="cerrarBanner('bnpalco10')">Cerrar</button>
+      </div>
+    </div>
+
+    <!-- Banner: Palco 11 -->
+    <div id="bnpalco11" class="banner-fotos" style="display: none;">
+      <h2 class="titulo-banner">Palco 11</h2>
+      <div class="carrusel" data-carrusel="palco11">
+        <button class="flecha izquierda">❮</button>
+        <div class="imagen-contenedor">
+          <img src="../../recursos/media/espacios/bnpalco11/1.avif" alt="Imagen 1 - Palco 11" class="imagen-activa" />
+          <img src="../../recursos/media/espacios/bnpalco11/2.avif" alt="Imagen 2 - Palco 11" />
+        </div>
+        <button class="flecha derecha">❯</button>
+      </div>
+      <div class="botones-banner">
+        <button class="cerrar-banner" onclick="cerrarBanner('bnpalco11')">Cerrar</button>
+      </div>
+    </div>
+
+    <!-- Banner: Palco 12 -->
+    <div id="bnpalco12" class="banner-fotos" style="display: none;">
+      <h2 class="titulo-banner">Palco 12</h2>
+      <div class="carrusel" data-carrusel="palco12">
+        <button class="flecha izquierda">❮</button>
+        <div class="imagen-contenedor">
+          <img src="../../recursos/media/espacios/bnpalco12/1.avif" alt="Imagen 1 - Palco 12" class="imagen-activa" />
+          <img src="../../recursos/media/espacios/bnpalco12/2.avif" alt="Imagen 2 - Palco 12" />
+        </div>
+        <button class="flecha derecha">❯</button>
+      </div>
+      <div class="botones-banner">
+        <button class="cerrar-banner" onclick="cerrarBanner('bnpalco12')">Cerrar</button>
+      </div>
+    </div>
+
+    <!-- Banner: Palco 13 -->
+    <div id="bnpalco13" class="banner-fotos" style="display: none;">
+      <h2 class="titulo-banner">Palco 13</h2>
+      <div class="carrusel" data-carrusel="palco13">
+        <button class="flecha izquierda">❮</button>
+        <div class="imagen-contenedor">
+          <img src="../../recursos/media/espacios/bnpalco13/1.avif" alt="Imagen 1 - Palco 13" class="imagen-activa" />
+          <img src="../../recursos/media/espacios/bnpalco13/2.avif" alt="Imagen 2 - Palco 13" />
+        </div>
+        <button class="flecha derecha">❯</button>
+      </div>
+      <div class="botones-banner">
+        <button class="cerrar-banner" onclick="cerrarBanner('bnpalco13')">Cerrar</button>
+      </div>
+    </div>
+
+    <!-- Banner: Palco 14 -->
+    <div id="bnpalco14" class="banner-fotos" style="display: none;">
+      <h2 class="titulo-banner">Palco 14</h2>
+      <div class="carrusel" data-carrusel="palco14">
+        <button class="flecha izquierda">❮</button>
+        <div class="imagen-contenedor">
+          <img src="../../recursos/media/espacios/bnpalco14/1.avif" alt="Imagen 1 - Palco 14" class="imagen-activa" />
+          <img src="../../recursos/media/espacios/bnpalco14/2.avif" alt="Imagen 2 - Palco 14" />
+        </div>
+        <button class="flecha derecha">❯</button>
+      </div>
+      <div class="botones-banner">
+        <button class="cerrar-banner" onclick="cerrarBanner('bnpalco14')">Cerrar</button>
+      </div>
+    </div>
+
+    <!-- Banner: Palco 15 -->
+    <div id="bnpalco15" class="banner-fotos" style="display: none;">
+      <h2 class="titulo-banner">Palco 15</h2>
+      <div class="carrusel" data-carrusel="palco15">
+        <button class="flecha izquierda">❮</button>
+        <div class="imagen-contenedor">
+          <img src="../../recursos/media/espacios/bnpalco15/1.avif" alt="Imagen 1 - Palco 15" class="imagen-activa" />
+          <img src="../../recursos/media/espacios/bnpalco15/2.avif" alt="Imagen 2 - Palco 15" />
+        </div>
+        <button class="flecha derecha">❯</button>
+      </div>
+      <div class="botones-banner">
+        <button class="cerrar-banner" onclick="cerrarBanner('bnpalco15')">Cerrar</button>
+      </div>
+    </div>
+
+    <!-- Banner: Palco 16 -->
+    <div id="bnpalco16" class="banner-fotos" style="display: none;">
+      <h2 class="titulo-banner">Palco 16</h2>
+      <div class="carrusel" data-carrusel="palco16">
+        <button class="flecha izquierda">❮</button>
+        <div class="imagen-contenedor">
+          <img src="../../recursos/media/espacios/bnpalco16/1.avif" alt="Imagen 1 - Palco 16" class="imagen-activa" />
+          <img src="../../recursos/media/espacios/bnpalco16/2.avif" alt="Imagen 2 - Palco 16" />
+        </div>
+        <button class="flecha derecha">❯</button>
+      </div>
+      <div class="botones-banner">
+        <button class="cerrar-banner" onclick="cerrarBanner('bnpalco16')">Cerrar</button>
+      </div>
+    </div>
+
+    <!-- Banner: Palco 17 -->
+    <div id="bnpalco17" class="banner-fotos" style="display: none;">
+      <h2 class="titulo-banner">Palco 17</h2>
+      <div class="carrusel" data-carrusel="palco17">
+        <button class="flecha izquierda">❮</button>
+        <div class="imagen-contenedor">
+          <img src="../../recursos/media/espacios/bnpalco17/1.avif" alt="Imagen 1 - Palco 17" class="imagen-activa" />
+          <img src="../../recursos/media/espacios/bnpalco17/2.avif" alt="Imagen 2 - Palco 17" />
+        </div>
+        <button class="flecha derecha">❯</button>
+      </div>
+      <div class="botones-banner">
+        <button class="cerrar-banner" onclick="cerrarBanner('bnpalco17')">Cerrar</button>
+      </div>
+    </div>
+
+    <!-- Banner: Palco 18 -->
+    <div id="bnpalco18" class="banner-fotos" style="display: none;">
+      <h2 class="titulo-banner">Palco 18</h2>
+      <div class="carrusel" data-carrusel="palco8">
+        <button class="flecha izquierda">❮</button>
+        <div class="imagen-contenedor">
+          <img src="../../recursos/media/espacios/bnpalco18/1.avif" alt="Imagen 1 - Palco 18" class="imagen-activa" />
+          <img src="../../recursos/media/espacios/bnpalco18/2.avif" alt="Imagen 2 - Palco 18" />
+        </div>
+        <button class="flecha derecha">❯</button>
+      </div>
+      <div class="botones-banner">
+        <button class="cerrar-banner" onclick="cerrarBanner('bnpalco18')">Cerrar</button>
+      </div>
+    </div>
+
+    <!-- Banner: Palco 19 -->
+    <div id="bnpalco19" class="banner-fotos" style="display: none;">
+      <h2 class="titulo-banner">Palco 19</h2>
+      <div class="carrusel" data-carrusel="palco19">
+        <button class="flecha izquierda">❮</button>
+        <div class="imagen-contenedor">
+          <img src="../../recursos/media/espacios/bnpalco19/1.avif" alt="Imagen 1 - Palco 19" class="imagen-activa" />
+          <img src="../../recursos/media/espacios/bnpalco19/2.avif" alt="Imagen 2 - Palco 19" />
+        </div>
+        <button class="flecha derecha">❯</button>
+      </div>
+      <div class="botones-banner">
+        <button class="cerrar-banner" onclick="cerrarBanner('bnpalco19')">Cerrar</button>
+      </div>
+    </div>
+
+    <!-- Banner: Palco 20 -->
+    <div id="bnpalco20" class="banner-fotos" style="display: none;">
+      <h2 class="titulo-banner">Palco 20</h2>
+      <div class="carrusel" data-carrusel="palco20">
+        <button class="flecha izquierda">❮</button>
+        <div class="imagen-contenedor">
+          <img src="../../recursos/media/espacios/bnpalco20/1.avif" alt="Imagen 1 - Palco 20" class="imagen-activa" />
+          <img src="../../recursos/media/espacios/bnpalco20/2.avif" alt="Imagen 2 - Palco 20" />
+        </div>
+        <button class="flecha derecha">❯</button>
+      </div>
+      <div class="botones-banner">
+        <button class="cerrar-banner" onclick="cerrarBanner('bnpalco20')">Cerrar</button>
+      </div>
+    </div>
+
+    <!-- Banner: Palco 21 -->
+    <div id="bnpalco21" class="banner-fotos" style="display: none;">
+      <h2 class="titulo-banner">Palco 21</h2>
+      <div class="carrusel" data-carrusel="palco21">
+        <button class="flecha izquierda">❮</button>
+        <div class="imagen-contenedor">
+          <img src="../../recursos/media/espacios/bnpalco21/1.avif" alt="Imagen 1 - Palco 21" class="imagen-activa" />
+          <img src="../../recursos/media/espacios/bnpalco21/2.avif" alt="Imagen 2 - Palco 21" />
+        </div>
+        <button class="flecha derecha">❯</button>
+      </div>
+      <div class="botones-banner">
+        <button class="cerrar-banner" onclick="cerrarBanner('bnpalco21')">Cerrar</button>
+      </div>
+    </div>
+
+    <!-- Banner: Palco 22 -->
+    <div id="bnpalco22" class="banner-fotos" style="display: none;">
+      <h2 class="titulo-banner">Palco 22</h2>
+      <div class="carrusel" data-carrusel="palco22">
+        <button class="flecha izquierda">❮</button>
+        <div class="imagen-contenedor">
+          <img src="../../recursos/media/espacios/bnpalco22/1.avif" alt="Imagen 1 - Palco 22" class="imagen-activa" />
+          <img src="../../recursos/media/espacios/bnpalco22/2.avif" alt="Imagen 2 - Palco 22" />
+        </div>
+        <button class="flecha derecha">❯</button>
+      </div>
+      <div class="botones-banner">
+        <button class="cerrar-banner" onclick="cerrarBanner('bnpalco22')">Cerrar</button>
+      </div>
+    </div>
+
+    <!-- Banner: Palco 23 -->
+    <div id="bnpalco23" class="banner-fotos" style="display: none;">
+      <h2 class="titulo-banner">Palco 23</h2>
+      <div class="carrusel" data-carrusel="palco23">
+        <button class="flecha izquierda">❮</button>
+        <div class="imagen-contenedor">
+          <img src="../../recursos/media/espacios/bnpalco23/1.avif" alt="Imagen 1 - Palco 23" class="imagen-activa" />
+          <img src="../../recursos/media/espacios/bnpalco23/2.avif" alt="Imagen 2 - Palco 23" />
+        </div>
+        <button class="flecha derecha">❯</button>
+      </div>
+      <div class="botones-banner">
+        <button class="cerrar-banner" onclick="cerrarBanner('bnpalco23')">Cerrar</button>
+      </div>
+    </div>
+
+    <!-- Banner: VIP 1-->
+    <div id="bnvip1" class="banner-fotos" style="display: none;">
+      <h2 class="titulo-banner">VIP 1</h2>
+      <div class="carrusel" data-carrusel="vip1">
+        <button class="flecha izquierda">❮</button>
+        <div class="imagen-contenedor">
+          <img src="../../recursos/media/espacios/bnvip1/1.avif" alt="Imagen 1 - VIP 1" class="imagen-activa" />
+          <img src="../../recursos/media/espacios/bnvip1/2.avif" alt="Imagen 2 - VIP 1" />
+        </div>
+        <button class="flecha derecha">❯</button>
+      </div>
+      <div class="botones-banner">
+        <button class="cerrar-banner" onclick="cerrarBanner('bnvip1')">Cerrar</button>
+      </div>
+    </div>
+
+    <!-- Banner: VIP 2-->
+    <div id="bnvip2" class="banner-fotos" style="display: none;">
+      <h2 class="titulo-banner">VIP 2</h2>
+      <div class="carrusel" data-carrusel="vip2">
+        <button class="flecha izquierda">❮</button>
+        <div class="imagen-contenedor">
+          <img src="../../recursos/media/espacios/bnvip2/1.avif" alt="Imagen 1 - VIP 2" class="imagen-activa" />
+          <img src="../../recursos/media/espacios/bnvip2/2.avif" alt="Imagen 2 - VIP 2" />
+        </div>
+        <button class="flecha derecha">❯</button>
+      </div>
+      <div class="botones-banner">
+        <button class="cerrar-banner" onclick="cerrarBanner('bnvip2')">Cerrar</button>
+      </div>
+    </div>
+
+    <!-- Banner: VIP 3-->
+    <div id="bnvip3" class="banner-fotos" style="display: none;">
+      <h2 class="titulo-banner">VIP 3</h2>
+      <div class="carrusel" data-carrusel="vip3">
+        <button class="flecha izquierda">❮</button>
+        <div class="imagen-contenedor">
+          <img src="../../recursos/media/espacios/bnvip3/1.avif" alt="Imagen 1 - VIP 3" class="imagen-activa" />
+          <img src="../../recursos/media/espacios/bnvip3/2.avif" alt="Imagen 2 - VIP 3" />
+        </div>
+        <button class="flecha derecha">❯</button>
+      </div>
+      <div class="botones-banner">
+        <button class="cerrar-banner" onclick="cerrarBanner('bnvip3')">Cerrar</button>
+      </div>
+    </div>
+
+    <!-- Banner: VIP 4-->
+    <div id="bnvip4" class="banner-fotos" style="display: none;">
+      <h2 class="titulo-banner">VIP 4</h2>
+      <div class="carrusel" data-carrusel="vip4">
+        <button class="flecha izquierda">❮</button>
+        <div class="imagen-contenedor">
+          <img src="../../recursos/media/espacios/bnvip4/1.avif" alt="Imagen 1 - VIP 4" class="imagen-activa" />
+          <img src="../../recursos/media/espacios/bnvip4/2.avif" alt="Imagen 2 - VIP 4" />
+        </div>
+        <button class="flecha derecha">❯</button>
+      </div>
+      <div class="botones-banner">
+        <button class="cerrar-banner" onclick="cerrarBanner('bnvip4')">Cerrar</button>
+      </div>
+    </div>
+
+    <!-- Banner: VIP 5-->
+    <div id="bnvip5" class="banner-fotos" style="display: none;">
+      <h2 class="titulo-banner">VIP 5</h2>
+      <div class="carrusel" data-carrusel="vip5">
+        <button class="flecha izquierda">❮</button>
+        <div class="imagen-contenedor">
+          <img src="../../recursos/media/espacios/bnvip5/1.avif" alt="Imagen 1 - VIP 5" class="imagen-activa" />
+          <img src="../../recursos/media/espacios/bnvip5/2.avif" alt="Imagen 2 - VIP 5" />
+        </div>
+        <button class="flecha derecha">❯</button>
+      </div>
+      <div class="botones-banner">
+        <button class="cerrar-banner" onclick="cerrarBanner('bnvip5')">Cerrar</button>
+      </div>
+    </div>
+
+  <!-- Scripts - Recursos -->
+  <script>var basePath = "../../";</script>
+  <script src="../../recursos/data/links.js"></script>
+
+  <!-- Scripts - Banner de Términos y Condiciones -->
+  <script src="../smk/recursos/js/tyc/banner_tyc.jsyc.js"></script>
+
+  <!-- Scripts - Espacios -->
+  <script src="../../recursos/js/espacios/estructura_nivel_2.js"></script>
+  <script src="../../recursos/js/espacios/carrusel.js" defer></script>
+
+</body>
+</html>

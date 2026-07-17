@@ -1,0 +1,27 @@
+/*tyc_scroll.css | Base de tyc.html*/
+
+
+/*=============== Scroll personalizado ===============*/
+html {
+  scrollbar-width: thin;
+  scrollbar-color: silver var(--color-bg);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: silver;
+  border-radius: 5px;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.4);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c0c0c0;
+}

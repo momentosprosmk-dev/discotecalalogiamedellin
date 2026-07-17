@@ -1,0 +1,155 @@
+/*base.css*/
+
+/* ================================ CONTENEDOR DE FORMULARIO ================================ */
+.menu {
+  position: relative;
+  padding: 40px;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+.menu-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ================================ ESTILOS DE FORMULARIO ================================ */
+form { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 26px;
+}
+
+/* Cada bloque de pregunta como tarjeta elegante */
+.field {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.field:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+
+/* Label elegante y consistente */
+.field > label {
+  font-weight: 500;
+  color: var(--gris-claro);
+  font-size: var(--form-reservar-font-size-label);
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+  width: 100%;
+}
+
+/* Inputs y selects dentro del contenedor */
+.field input,
+.field select {
+  width: 100%;
+  background: rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px;
+  padding: 12px;
+  font-size: var(--form-reservar-font-size-input);
+  color: var(--blanco-oscuro);
+  transition: border-color 0.3s, background 0.3s;
+  box-sizing: border-box;
+}
+
+.field input:focus,
+.field select:focus {
+  background: rgba(0,0,0,0.6); /* fondo más intenso */
+  border: 1px solid var(--rojo-oscuro); /* borde rojo elegante */
+  box-shadow: 0 0 8px rgba(255,77,77,0.4); /* glow rojo claro sutil */
+  color: var(--blanco);
+  outline: none;
+  transition: all 0.3s ease; /* transición suave */
+}
+
+
+/* ================================ ZONA SELECCIONADA ================================ */
+.nota {
+  margin-top: 8px;
+  font-size: var(--form-reservar-font-size-notas-titulo);
+  color: var(--gris-claro);
+  line-height: 1.5;
+}
+.nota strong {
+  font-size: var(--form-reservar-font-size-notas-titulo);
+  font-weight: 600;
+}
+.nota ul {
+  margin: 4px 0 0 18px;
+  padding: 0;
+}
+.nota li {
+  margin-bottom: 2px;
+}
+
+/* ================================ CONTACTO ================================ */
+/* Teléfono */
+.telefono-container {
+  display: flex;
+  gap: 10px;
+}
+.telefono-container input {
+  flex: 1;
+  min-width: 0; /* asegura consistencia en responsive */
+}
+
+/* Placeholder */
+select option[value=""] { color: #888; }
+
+/* Botón premium */
+button {
+  background: linear-gradient(135deg, var(--negro));
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 14px;
+  border-radius: 8px;
+  color: var(--blanco);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+button.disabled {
+  background: #444;
+  cursor: not-allowed;
+}
+
+/* ================================ RESPONSIVE ================================ */
+@media (max-width: 1024px) {
+  .menu {
+    padding-bottom: 80px;
+  }
+  .menu-inner {
+    max-width: 100%;
+  }
+  .telefono-container {
+    flex-direction: column;
+  }
+  button {
+    font-size: 16px;
+    padding: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .telefono-container {
+    flex-direction: row;
+  }
+  button {
+    font-size: 18px;
+    padding: 16px;
+  }
+}

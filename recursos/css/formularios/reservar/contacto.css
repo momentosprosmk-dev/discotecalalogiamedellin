@@ -1,0 +1,80 @@
+/* contacto.css */
+
+/* ================================ SELECCIÓN DE PAÍS ================================ */
+.sugerencias {
+  position: relative;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.opcion {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.opcion:hover {
+  background: #f0f0f0;
+}
+/* Bloque país con bandera + input */
+.selector-pais {
+  display: flex;
+  align-items: center;
+  background: rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px;
+  padding: 2px;
+  font-size: var(--form-reservar-font-size-input);
+  color: var(--blanco-oscuro);
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.selector-pais:focus-within {
+  background: rgba(0,0,0,0.6);
+  border: 1px solid var(--rojo-oscuro);
+  box-shadow: 0 0 8px rgba(255,77,77,0.4);
+  color: var(--blanco);
+}
+
+.selector-pais .bandera {
+  font-size: var(--form-reservar-font-size-input);
+  margin-right: 6px;
+  margin-left: 10px;
+}
+
+.selector-pais input {
+  border: none;
+  outline: none;
+  background: transparent;
+  flex: 1;
+  color: inherit;
+}
+/* ================================ INGRESAR NÚMERO DE CONTACTO ================================ */
+.telefono-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+/* Bloque número */
+.numero-contacto input {
+  width: 100%;
+  background: rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px;
+  padding: 12px;
+  font-size: var(--form-reservar-font-size-input);
+  color: var(--blanco-oscuro);
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.numero-contacto input:focus {
+  background: rgba(0,0,0,0.6);
+  border: 1px solid var(--rojo-oscuro);
+  box-shadow: 0 0 8px rgba(255,77,77,0.4);
+  color: var(--blanco);
+  outline: none;
+}

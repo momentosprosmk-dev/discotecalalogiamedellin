@@ -1,0 +1,129 @@
+/*hero.css*/
+
+/* ================================ HERO ================================ */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+  padding-top: var(--header-height);
+  background-image: url('../../media/index/hero_discoteca_la_logia.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  color: var(--blanco);
+}
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+  z-index: 1;
+}
+
+/* Columna izquierda (QR) */
+.hero-left {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: flex-start;
+  margin-top: 20%;
+  margin-left: 0;
+}
+/* Columna izquierda (QR) | Contenedor de QR*/
+.qr-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: rgba(0,0,0,0.6);
+  border: 2px solid var(--rojo-oscuro);
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(229,9,20,0.3);
+  transition: all 0.3s ease;
+}
+/* Columna izquierda (QR) | Imagenes*/
+.qr-box img {
+  width: 220px;
+  height: 220px;
+}
+/* Columna izquierda (QR) | Texto*/
+.qr-box span {
+  font-size: 1.5rem;
+  color: var(--blanco);
+}
+/* Columna izquierda (QR) | Hover con movimiento */
+.qr-box:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 20px rgba(229,9,20,0.5);
+}
+.qr-box:hover img {
+  transform: rotate(3deg);
+}
+
+/* Columna derecha (Botones) */
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: flex-end;
+  margin-top: 20%;
+  margin-right: 5%;
+}
+/* Columna derecha (Botones) | Grupo*/
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+/* Columna derecha (Botones) | Boton solo*/
+.btn-primary {
+  text-decoration: none;
+  background: var(--negro);
+  color: var(--gris-claro);
+  padding: 20px 40px;
+  border-radius: 8px;
+  font-size: 2rem;
+  font-weight: 600;
+  border: 2px solid var(--rojo-oscuro);
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px rgba(0,0,0,0.6);
+}
+.btn-primary:hover {
+  background: var(--rojo-oscuro);
+  color: var(--blanco);
+  box-shadow: 0 0 18px rgba(229,9,20,0.5);
+  transform: scale(1.05);
+}
+
+/* ================================ TEXTO ================================ */
+.hero p,
+.hero .btn-group {
+  position: relative;
+  z-index: 1;
+}
+.hero p {
+  font-family: 'Lora', serif;
+  font-size: 2.2rem;
+  line-height: 1.9;
+  margin-bottom: 80px;
+  max-width: 750px;
+  font-weight: 400;
+  color: rgba(245, 245, 245, 0.95);
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+}
+
+/* ================================ RESPONSIVE ================================ */
+/* Pantallas menores a 1024px (Movil) */
+@media (max-width: 1024px) {
+  .hero {
+    display: none;
+  }
+}
+
+/* Pantallas mayores a 1024px (PC) */
+@media (min-width: 1024px) {
+}

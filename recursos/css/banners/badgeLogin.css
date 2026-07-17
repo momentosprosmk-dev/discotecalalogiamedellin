@@ -1,0 +1,44 @@
+/* badgeLogin.css | Banner de login para Servicio */
+
+/* Input elegante */
+.badge-input {
+  width: 80%;
+  max-width: 240px;
+  padding: 12px;
+  margin: 14px auto;
+  display: block;
+  border: 1px solid #444;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--negro-claro), #222);
+  color: var(--blanco);
+  font-size: 1.2rem;
+  transition: border-color 0.3s, background 0.3s, box-shadow 0.3s;
+}
+.badge-input:focus {
+  outline: none;
+  border-color: var(--rojo);
+  background: #111;
+  box-shadow: 0 0 10px rgba(200,50,50,0.6);
+}
+/* Botón elegante */
+.btn-badge {
+  width: 85%;
+  max-width: 240px;
+  padding: 12px;
+  margin: 18px auto;
+  display: block;
+  background: linear-gradient(135deg, var(--rojo-oscuro), var(--rojo));
+  border: 1px solid var(--rojo-oscuro);
+  border-radius: 12px;
+  color: var(--blanco);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.6);
+}
+.btn-badge:hover {
+  background: linear-gradient(135deg, var(--rojo), var(--rojo-oscuro));
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(255,0,0,0.7), 0 4px 12px rgba(0,0,0,0.8);
+}

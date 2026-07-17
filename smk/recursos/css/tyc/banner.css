@@ -1,0 +1,150 @@
+/*banner.css | Estilos de banner.html*/
+
+
+/*=============== Banner TyC ===============*/
+.bn-tyc {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.bn-tyc.visible {
+  display: flex;
+}
+
+.bn-tyc-content {
+  background: #000;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+  border: 1px solid #222;
+}
+
+/* Logo del banner */
+#logo-banner {
+  margin-bottom: 1.2rem;
+  border-bottom: 2px solid #444;
+  padding-bottom: 0.6rem;
+  text-align: center;
+}
+#logo-banner img {
+  max-width: 200px;
+  height: auto;
+  display: inline-block;
+}
+
+/* Texto del banner */
+.bn-tyc-content p {
+  color: #e8e4e4;
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  line-height: 1.8;
+}
+
+/* Negrita dentro del banner */
+.bn-tyc-content strong {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/* Enlace dentro del banner */
+.bn-tyc-content .link-tyc {
+  display: inline-block;
+  margin: 1rem 0;
+  color: #D4AF37;
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: color 0.2s;
+}
+.bn-tyc-content .link-tyc:hover {
+  color: #f5d76e;
+}
+
+/* Botones del Banner TyC */
+.bn-tyc .botones-horizontal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.bn-tyc .btn-tyc {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #222;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  border: 1px solid #444;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.bn-tyc .btn-tyc:hover {
+  background: #333;
+  transform: scale(1.05);
+}
+
+/* Botón principal (Acepto) */
+#btn-aceptar-tyc {
+  background: linear-gradient(135deg, #D4AF37, #f5d76e);
+  border: 1px solid #b8972e;
+  color: #000;
+}
+#btn-aceptar-tyc:hover {
+  background: linear-gradient(135deg, #b8972e, #e6c85f);
+}
+
+/* Botón secundario (No acepto) */
+#btn-rechazar-tyc {
+  background: #888;
+  border-color: #666;
+}
+#btn-rechazar-tyc:hover {
+  background: #666;
+}
+
+/* Nota aclaratoria */
+.bn-tyc-content .nota {
+  font-size: 1.4rem;
+  color: #ccc;
+  margin-top: 1rem;
+}
+
+/* Ajustes para pantallas medianas */
+@media (max-width: 1024px) {
+  #logo-banner img {
+    max-width: 180px;
+  }
+  .bn-tyc-content p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+  }
+  .bn-tyc-content strong {
+    font-size: 1.3rem;
+  }
+  .bn-tyc .btn-tyc {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+  .bn-tyc-content .nota {
+    font-size: 1.2rem;
+  }
+}

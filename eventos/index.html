@@ -1,0 +1,55 @@
+<!-- index.html | Carga Eventos | https://discotecalalogia.com/eventos/-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rituales - La Logia</title>
+  <link rel="shortcut icon" href="../recursos/media/global/favicon_discoteca_la_logia.ico" type="image/x-icon" />
+  <link rel="icon" href="../recursos/media/global/favicon_discoteca_la_logia.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../recursos/css/global/base.css">
+  <link rel="stylesheet" href="../recursos/css/global/footer.css">
+  <link rel="stylesheet" href="../recursos/css/otraswebs/otraswebs.css" />
+  <style>
+  html, body {
+    background-color: #000000;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+  }
+  </style>
+</head>
+<body>
+  <!-- Script para abrir min 1024 -->
+  <script>
+    if (window.innerWidth >= 1024) {
+      window.location.href = "..";
+    }
+  </script>
+
+  <!-- Contenido principal con visor de eventos -->
+  <main class="contenedor">
+    <iframe
+      src="https://discotecalalogia.com/eventos/"
+      class="visor"
+      allowfullscreen
+      loading="lazy"
+      scrolling="no"
+    ></iframe>
+  </main>
+
+  <!-- Footer | Portal La Logia -->
+  <footer>
+    <section class="footer-movil">
+      <a href="../" class="btn-footer">⌂ Página Principal</a>
+    </section> 
+  </footer>
+
+  <!-- Scripts - Recursos -->
+  <script>var basePath = "../";</script>
+
+  <!-- Scripts - Banner de Términos y Condiciones -->
+  <script src="../smk/recursos/js/tyc/validadorTyc.js"></script>
+  
+</html>

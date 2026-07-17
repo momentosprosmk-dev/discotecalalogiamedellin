@@ -1,0 +1,51 @@
+/*footer.css | Botones de Acepto - No Acepto*/
+
+
+/*=============== footer.css | Botones de Acepto - No Acepto ===============*/
+.footer-fijo {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: var(--altura-footer);
+  background: var(--color-fondo);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 5px;
+  z-index: 1000;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.6);
+}
+
+.botones-horizontal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.btn-confirmar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-btn-fondo);
+  color: var(--color-texto);
+  padding: 10px 20px;
+  border-radius: var(--radio-borde);
+  font-weight: var(--peso-negrita);
+  font-size: var(--tamano-texto);
+  text-transform: uppercase;
+  border: 1px solid var(--color-borde-claro);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.btn-confirmar:hover {
+  background: var(--color-btn-hover);
+  color: #f1f1f1;
+  transform: scale(1.05);
+}

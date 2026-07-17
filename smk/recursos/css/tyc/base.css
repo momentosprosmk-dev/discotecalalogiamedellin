@@ -1,0 +1,67 @@
+/*=============== base.css | Variables globales y estilos principales ===============*/
+
+:root {
+  /* Paleta de colores principal */
+  --color-fondo: #000000;
+  --color-texto: #e8e4e4;
+  --color-dorado: #D4AF37;
+  --color-dorado-hover: #f5d76e;
+  --color-azul-petroleo: #003f4f;
+
+  /* Colores secundarios */
+  --color-borde: #444;
+  --color-borde-claro: #666;
+  --color-btn-fondo: #222;
+  --color-btn-hover: #333;
+
+  /* Tipografía */
+  --fuente-base: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+  --tamano-texto: 1rem;
+  --tamano-titulo: 1.4rem;
+  --peso-negrita: 600;
+
+  /* Espaciados y bordes */
+  --radio-borde: 6px;
+  --espaciado: 1rem;
+  --sombra: 0 0 25px rgba(212, 175, 55, 0.4);
+
+  /* Alturas */
+  --altura-footer: 50px;
+}
+
+/* Reset básico */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: var(--fuente-base);
+  font-size: var(--tamano-texto);
+  line-height: 1.5;
+}
+
+/* Botones base */
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: var(--fuente-base);
+  font-weight: var(--peso-negrita);
+  border-radius: var(--radio-borde);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+/* Contenedor principal */
+main.contenedor {
+  min-height: calc(100vh - var(--altura-footer));
+  background-color: rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Footer fijo */
+footer.footer-fijo {
+  height: var(--altura-footer);
+  background: var(--color-fondo);
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.6);
+}

@@ -1,0 +1,97 @@
+<!-- index.html | Vodka-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Ofertas - Vodka</title>
+  <link rel="shortcut icon" href="../../recursos/media/favicon_discoteca_la_logia.ico" type="image/x-icon" />
+  <link rel="icon" href="../../recursos/media/favicon_discoteca_la_logia.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../../recursos/css/global/base.css">
+  <link rel="stylesheet" href="../../recursos/css/global/header.css">
+  <link rel="stylesheet" href="../../recursos/css/global/footer.css">
+  <link rel="stylesheet" href="../../recursos/css/global/scrollVertical.css">
+  <link rel="stylesheet" href="../../recursos/css/carta/licores/base.css">
+  <style>
+  html, body {
+    background-color: #000000;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+  }
+  </style>
+</head>
+<body>
+  <!-- Header | General -->
+  <header class="header">
+    <div class="logo"><img src="../../recursos/media/global/logo_discoteca_la_logia.avif"></div>
+    <h1>Vodka</h1>
+    <nav class="nav">
+      <ul>
+        <li><a href="../categorias/" class="bt-opc">Ver más categorías</a></li>
+        <li><a href="../../" class="bt-opc">Inicio</a></li>
+        <li><a href="../../formularios/reservar/" class="bt-opc">Reservar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Menú de navegación -->
+  <nav class="section-scroll">
+    <div class="menu-inner" id="menu"></div>
+  </nav>
+
+  <!-- Footer | Portal La Logia -->
+  <footer>
+    <section class="footer-movil">
+      <a href="../categorias/" class="btn-footer">Ver más categorías</a>
+    </section>
+
+    <section  class="footer-pc">
+      <div class="footer-container">
+        <!-- Logo / Marca -->
+        <div class="footer-brand">
+          <img src="../../recursos/media/global/footer_discoteca_la_logia.avif" alt="Logo MomentosPro" class="footer-brand-logo">
+          <div class="footer-brand-text">
+            <p>· La Hermandad Del Perreo ·</p>
+          </div>
+        </div>
+        <!-- Navegación rápida -->
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="../categorias/">Ver más categorías</a></li>
+            <li><a href="../../">Inicio</a></li>
+            <li><a href="../../formularios/reservar/" >Reservar</a></li>
+          </ul>
+        </nav>
+        <!-- Redes sociales -->
+        <div class="footer-social">
+          <a data-link="btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a data-link="btn-facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a data-link="btn-instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <!-- Derechos reservados -->
+      <div id="texto-footer" class="footer-copyright"></div>
+    </section>
+  </footer>
+
+  <!-- Contenedor - Banner de Términos y Condiciones -->
+  <div id="tyc-container"></div>
+
+  <!-- Scripts - Recursos -->
+  <script>var basePath = "../../";</script>
+  <script>var baseLicor = "vodka";</script>
+  <script src="../../recursos/js/global/gateway.js"></script>
+  <script src="../../recursos/js/global/copyright.js"></script>
+  <script src="../../recursos/js/carta/gateway.js"></script>
+
+  <!-- Scripts - Banner de Términos y Condiciones -->
+  <script src="../../smk/recursos/js/tyc/validadorTyc.js"></script>
+
+  <!-- Scripts - Carta -->
+  <script src="../../recursos/js/carta/licores.js"></script>
+
+</body>
+</html>
