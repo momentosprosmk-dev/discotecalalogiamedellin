@@ -10,10 +10,13 @@ body {
 /* ================================ CONTENEDOR PRINCIPAL ================================ */
 /*Sección principal*/
 .section-scroll {
-  flex: 1;
+  top: var(--header-height);
+  bottom: var(--footer-height);
+  left: 0;
+  right: 0;
   overflow-y: auto;
   overflow-x: hidden;
-  padding-bottom: var(--footer-height);
+  width: 100%;
 }
 /* Wrapper interno para centrar y separar los items */
 .menu-inner {
@@ -85,8 +88,7 @@ body {
     display: none;
   }
   .section-scroll {
-    overflow-y: auto;
-    max-height: 100vh;
+    position: fixed;
   }
   .item {
     max-width: 95%;
@@ -104,13 +106,6 @@ body {
     height: auto;
     display: block;
   }
-  .section-scroll {
-    overflow-y: visible;
-    height: auto;
-    margin-bottom: 0;
-    padding-bottom: 80px;
-  }
-  /* Layout en cuadrícula */
   .menu-inner {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); 
