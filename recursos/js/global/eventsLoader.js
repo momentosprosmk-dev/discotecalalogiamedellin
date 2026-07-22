@@ -44,4 +44,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const globalScript = document.createElement("script");
   globalScript.src = path + "recursos/js/global/eventsBadgePresstimer.js";
   document.body.appendChild(globalScript);
+
+  document.addEventListener("click", function(e) {
+    if (e.target && e.target.id === "btn-aviso-reservar") {
+      window.location.href = basePath + "formularios/reservar/";
+    }
+  });
 });

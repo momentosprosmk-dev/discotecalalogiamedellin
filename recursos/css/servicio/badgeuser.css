@@ -28,7 +28,7 @@ html, body {
 
 /* ================================ FOTO DEL USUARIO ================================ */
 .user-photo {
-  margin-top: 0rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 .user-photo img {
@@ -49,7 +49,7 @@ html, body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 2.2rem;
-  margin: 0.5rem 0 0;
+  margin: 0.6rem 0 0;
   color: var(--gris-claro);
 }
 .user-info h3 {

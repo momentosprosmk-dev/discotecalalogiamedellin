@@ -1,14 +1,11 @@
 // banner.js | Gestión del banner TyC
 
 function iniciarBannerTyC(tycFechaActual) {
-  // Referencias a los elementos del banner
   const bannerTyc  = document.getElementById("banner-tyc");
   const btnAceptar = document.getElementById("btn-aceptar-tyc");
   const btnRechazar = document.getElementById("btn-rechazar-tyc");
   const linkTyc = document.getElementById("link-tyc");
 
-
-  // Muestra el banner si nunca aceptó o si la fecha cambió
   if (!bannerTyc || !btnAceptar || !linkTyc) return;
 
   const tycEstado = localStorage.getItem("tyc");
@@ -18,14 +15,18 @@ function iniciarBannerTyC(tycFechaActual) {
     document.body.classList.add("no-scroll");
   }
 
-  // Acción al aceptar: guarda la fecha actual en localStorage y oculta el banner
+  // Acción al aceptar
   btnAceptar.addEventListener("click", () => {
     localStorage.setItem("tyc", tycFechaActual);
     bannerTyc.classList.remove("visible");
     document.body.classList.remove("no-scroll");
+    // Ejecutar inmediatamente el Banner de Marketing
+    if (typeof validarMarketing === "function") {
+      validarMarketing();
+    }
   });
 
-  // Acción al rechazar: guarda "0" en localStorage y redirige
+  // Acción al rechazar
   if (btnRechazar && window.bannerConfig?.rechazarRuta) {
     btnRechazar.addEventListener("click", () => {
       localStorage.setItem("tyc", "0");
@@ -33,7 +34,7 @@ function iniciarBannerTyC(tycFechaActual) {
     });
   }
 
-  // Acción al hacer clic en el enlace TyC: redirige a la ruta configurada
+  // Acción al hacer clic en el enlace TyC
   linkTyc.addEventListener("click", (e) => {
     e.preventDefault();
     if (window.bannerConfig?.linkRuta) {
