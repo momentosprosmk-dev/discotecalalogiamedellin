@@ -1,7 +1,7 @@
 /* base.css | estilos generales para banners de marketing */
 
 /* ================================ CONFIGURACIÓN GENERAL ================================ */
-.bn-info, .bn-reserva {
+.bn-info {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.733);
@@ -11,11 +11,11 @@
   z-index: 9999;
 }
 
-.bn-info.visible, .bn-reserva.visible {
+.bn-info.visible {
   display: flex;
 }
 
-.bn-info-content, .bn-reserva-content {
+.bn-info-content {
   position: relative;
   background: #000;
   border-radius: 20px;
@@ -24,8 +24,11 @@
   border: 3px solid #b00000;
   box-shadow: 0 0 40px rgba(176,0,0,0.7);
   display: inline-block;
-  height: 80dvh;
-  max-height: calc(100% - env(safe-area-inset-bottom));
+  min-height: 80vh;
+  min-height: 80dvh;
+
+  max-height: calc(100dvh - env(safe-area-inset-bottom));
+  padding-bottom: env(safe-area-inset-bottom);
   margin: auto;
 }
 
@@ -67,8 +70,7 @@
 }
 
 /* PC: sobre el banner (parte superior del overlay) */
-.bn-info .btn-cerrar-banner,
-.bn-reserva .btn-cerrar-banner {
+.bn-info .btn-cerrar-banner {
   top: calc(50% - 40vh - 3.5rem);
 }
 
@@ -83,7 +85,7 @@
 /* ================================ RESPONSIVE ================================ */
 /* Pantallas menores a 1024px (Móvil) */
 @media (max-width: 1024px) {
-  .bn-info-content, .bn-reserva-content {
+  .bn-info-content {
     height: 88vh;
     border-radius: 12px;
   }
