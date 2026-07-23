@@ -98,10 +98,9 @@
     object-fit: contain;
   }
 
-  .bn-info .btn-cerrar-banner,
-  .bn-reserva .btn-cerrar-banner {
+  .bn-info .btn-cerrar-banner {
     top: auto;
-    bottom: calc(50% - 40vh - 4rem);
+    bottom: calc(50% - 40dvh - 2.5rem);
     font-size: 2.5rem;
     width: 3rem;
     height: 3rem;
