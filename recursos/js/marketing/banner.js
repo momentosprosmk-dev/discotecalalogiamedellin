@@ -51,7 +51,7 @@ async function cargarBanner() {
     }
 
     // Mostrar banner
-    const banner = contenedor.querySelector(".bn-info, .bn-reserva");
+    const banner = contenedor.querySelector(".bn-info");
     if (banner) {
       banner.classList.add("visible");
 

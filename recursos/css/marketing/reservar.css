@@ -1,38 +1,28 @@
 /* reservar.css | estilos específicos del banner de reserva */
 
-/* Banner de reserva */
-.bn-info-content {
-  box-shadow: 0 0 25px rgba(255,50,50,0.8);
-  position: relative;
-}
-
-/* Texto destacado */
-.bn-info-content strong {
-  color: #ff0000;
-}
-
 /* Botón de reservar sobre la imagen */
 .btn-reservar {
   position: absolute;
   bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
-  padding: 0.8rem 2rem;
+  padding: 0.8rem 2.2rem;
   font-size: 1.2rem;
-  background: linear-gradient(145deg, #b00000, #d10000);
+  font-weight: 600;
+  background: linear-gradient(145deg, #b00000, #333333); /* rojo + gris */
   color: #fff;
   border: none;
-  border-radius: 10px;
+  border-radius: 30px;
   cursor: pointer;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.6), inset 0 2px 4px rgba(255,255,255,0.2);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.6), inset 0 2px 4px rgba(255,255,255,0.15);
   transition: all 0.3s ease;
   z-index: 10001;
 }
 
 .btn-reservar:hover {
-  background: linear-gradient(145deg, #d10000, #b00000);
-  transform: translateX(-50%) scale(1.05);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.7), inset 0 3px 6px rgba(255,255,255,0.25);
+  background: linear-gradient(145deg, #333333, #b00000); /* inversión elegante */
+  transform: translateX(-50%) scale(1.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.8), inset 0 3px 6px rgba(255,255,255,0.25);
 }
 
 /* ================================ PC ================================ */
