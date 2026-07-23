@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!window.enlaces.hasOwnProperty(baseLicor)) {
     console.error(`El baseLicor "${baseLicor}" no existe dentro de las claves de window.enlaces`);
     alert(`Error: El baseLicor "${baseLicor}" no existe en la configuración`);
-    return; // detener ejecución
+    return;
   }
 
   const url = window.enlaces[baseLicor];
