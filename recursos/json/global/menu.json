@@ -1,0 +1,147 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Menu",
+  "name": "Carta de Licores y Cócteles",
+  "hasMenuSection": [
+    {
+      "@type": "MenuSection",
+      "name": "Whiskies",
+      "hasMenuItem": [
+        { "@type": "MenuItem", "name": "Johnnie Walker Blue Label" },
+        { "@type": "MenuItem", "name": "Buchanan’s 18 Años" },
+        { "@type": "MenuItem", "name": "Glenmorangie Quinta Ruban" },
+        { "@type": "MenuItem", "name": "Buchanan’s Master" },
+        { "@type": "MenuItem", "name": "Glenmorangie Original" },
+        { "@type": "MenuItem", "name": "Jack Daniel’s" },
+        { "@type": "MenuItem", "name": "Old Parr 12 Años" },
+        { "@type": "MenuItem", "name": "Buchanan’s 12 años" },
+        { "@type": "MenuItem", "name": "Johnnie Walker Black Label" },
+        { "@type": "MenuItem", "name": "Johnnie Walker Red Label" }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Tequilas",
+      "hasMenuItem": [
+        { "@type": "MenuItem", "name": "Clase Azul Reposado" },
+        { "@type": "MenuItem", "name": "Don Julio 1942" },
+        { "@type": "MenuItem", "name": "Don Julio 70" },
+        { "@type": "MenuItem", "name": "Maestro Dobel Diamante" },
+        { "@type": "MenuItem", "name": "1800 Cristalino Añejo" },
+        { "@type": "MenuItem", "name": "1800 Añejo" },
+        { "@type": "MenuItem", "name": "Don Julio Añejo" },
+        { "@type": "MenuItem", "name": "Don Julio Blanco" },
+        { "@type": "MenuItem", "name": "Don Julio Reposado" },
+        { "@type": "MenuItem", "name": "Jose Cuervo Tradicional Tapa Corcho" },
+        { "@type": "MenuItem", "name": "Jose Cuervo Especial Reposado" }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Rones",
+      "hasMenuItem": [
+        { "@type": "MenuItem", "name": "Zacapa Centenario 23 Años" },
+        { "@type": "MenuItem", "name": "Ron Viejo de Caldas 15 Años" },
+        { "@type": "MenuItem", "name": "Ron Viejo de Caldas 8 Años" },
+        { "@type": "MenuItem", "name": "Ron Viejo de Caldas 3 Años" },
+        { "@type": "MenuItem", "name": "Ron Viejo de Caldas Esencial" }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Vodkas",
+      "hasMenuItem": [
+        { "@type": "MenuItem", "name": "Grey Goose" },
+        { "@type": "MenuItem", "name": "Belvedere Pure" },
+        { "@type": "MenuItem", "name": "Smirnoff No 21 Red" },
+        { "@type": "MenuItem", "name": "Smirnoff Spicy Tamarind" }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Ginebras",
+      "hasMenuItem": [
+        { "@type": "MenuItem", "name": "Tanqueray London Dry Gin" },
+        { "@type": "MenuItem", "name": "Martin Miller’s Gin" }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Champagnes y Vinos Espumosos",
+      "hasMenuItem": [
+        { "@type": "MenuItem", "name": "Krug Grande Cuvée Box" },
+        { "@type": "MenuItem", "name": "Dom Pérignon" },
+        { "@type": "MenuItem", "name": "Veuve Clicquot Rich" },
+        { "@type": "MenuItem", "name": "Veuve Clicquot Rosé" },
+        { "@type": "MenuItem", "name": "Veuve Clicquot Brut" },
+        { "@type": "MenuItem", "name": "Chandon Délice" },
+        { "@type": "MenuItem", "name": "Chandon Rosé" },
+        { "@type": "MenuItem", "name": "Chandon Brut" },
+        { "@type": "MenuItem", "name": "JP Chenet Ice Rosé" }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Aguardientes",
+      "hasMenuItem": [
+        { "@type": "MenuItem", "name": "Aguardiente Amarillo de Manzanares" },
+        { "@type": "MenuItem", "name": "Aguardiente Antioqueño Azul" },
+        { "@type": "MenuItem", "name": "Aguardiente Antioqueño Verde" }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Cervezas y Bebidas Preparadas",
+      "hasMenuItem": [
+        { "@type": "MenuItem", "name": "Cerveza Stella Artois" },
+        { "@type": "MenuItem", "name": "Cerveza Heineken" },
+        { "@type": "MenuItem", "name": "Cerveza Corona" },
+        { "@type": "MenuItem", "name": "Cerveza Sol" },
+        { "@type": "MenuItem", "name": "Smirnoff Ice Green Apple" },
+        { "@type": "MenuItem", "name": "Smirnoff Ice Original" }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Hookah y Sabores",
+      "hasMenuItem": [
+        { "@type": "MenuItem", "name": "Hookah Premium" },
+        { "@type": "MenuItem", "name": "Hookah VIP" },
+        { "@type": "MenuItem", "name": "Recarga Hookah" },
+        { "@type": "MenuItem", "name": "Menta" },
+        { "@type": "MenuItem", "name": "Menta-Lima" },
+        { "@type": "MenuItem", "name": "Blueberry" },
+        { "@type": "MenuItem", "name": "Sandía" },
+        { "@type": "MenuItem", "name": "Uva" },
+        { "@type": "MenuItem", "name": "Doble Manzana" },
+        { "@type": "MenuItem", "name": "Fresa" },
+        { "@type": "MenuItem", "name": "Cereza" },
+        { "@type": "MenuItem", "name": "Guayaba-Melón" },
+        { "@type": "MenuItem", "name": "Maracuyá" },
+        { "@type": "MenuItem", "name": "Tropical" },
+        { "@type": "MenuItem", "name": "Magic Love" },
+        { "@type": "MenuItem", "name": "Love 66" },
+        { "@type": "MenuItem", "name": "Lady Killer" }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Cócteles",
+      "hasMenuItem": [
+        { "@type": "MenuItem", "name": "Gin and Tonic" },
+        { "@type": "MenuItem", "name": "Moscow Mule" },
+        { "@type": "MenuItem", "name": "Mojito" },
+        { "@type": "MenuItem", "name": "Cuba Libre" },
+        { "@type": "MenuItem", "name": "Paloma" },
+        { "@type": "MenuItem", "name": "Tequila Sunrise" },
+        { "@type": "MenuItem", "name": "Margarita Don Julio 70" },
+        { "@type": "MenuItem", "name": "Piña Colada" },
+        { "@type": "MenuItem", "name": "Daiquiri de Fresa" },
+        { "@type": "MenuItem", "name": "Mezcalita" },
+        { "@type": "MenuItem", "name": "Tamarindo" },
+        { "@type": "MenuItem", "name": "Buchanitas" },
+        { "@type": "MenuItem", "name": "Cosmopolitan" }
+      ]
+    }
+  ]
+}

@@ -5,17 +5,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <!-- SEO básico -->
   <title>Carta - Discoteca La Logia Medellín</title>
   <meta name="description" content="Discoteca La Logia en Medellín: la hermandad del perreo. Haz tu reserva, explora nuestra carta de licores premium y disfruta de noches intensas de reguetón y fiesta sin límites." />
   <meta name="keywords" content="discoteca Medellín, perreo, reguetón, reservar mesa, carta de licores, fiesta nocturna, La Logia" />
-
   <!-- Favicon -->
   <link rel="shortcut icon" href="/recursos/media/global/favicon_discoteca_la_logia.ico" type="image/x-icon" />
   <link rel="icon" href="/recursos/media/global/favicon_discoteca_la_logia.ico" type="image/x-icon" />
   <link rel="icon" href="/recursos/media/global/favicon_discoteca_la_logia.png" type="image/png" />
-  
   <!-- CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="/recursos/css/global/base.css">
@@ -24,25 +21,20 @@
   <link rel="stylesheet" href="/recursos/css/global/scrollVertical.css">
   <link rel="stylesheet" href="/recursos/css/index/movil.css">
   <link rel="stylesheet" href="/recursos/css/index/pc.css">
-  
   <!-- Manifest PWA -->
   <link rel="manifest" href="/manifest.json">
-
   <!-- Open Graph (Facebook, WhatsApp) -->
   <meta property="og:title" content="Discoteca La Logia - Medellín" />
   <meta property="og:description" content="Discoteca La Logia en Medellín: la hermandad del perreo elegante. Haz tu reserva, explora nuestra carta de licores premium y disfruta de noches intensas de reguetón y fiesta sin límites." />
   <meta property="og:image" content="https://discotecalalogia-med.momentospro.com/recursos/media/global/pwa_discoteca_la_logia_512x512.png" />
   <meta property="og:url" content="https://discotecalalogia-med.momentospro.com" />
   <meta property="og:type" content="website" />
-
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Discoteca La Logia - Medellín" />
   <meta name="twitter:description" content="La hermandad del perreo elegante: reserva tu mesa VIP y disfruta de reguetón sin límites en Medellín." />
   <meta name="twitter:image" content="https://discotecalalogia-med.momentospro.com/recursos/media/global/pwa_discoteca_la_logia_512x512.png" />
   <meta name="twitter:url" content="https://discotecalalogia-med.momentospro.com" />
-
-  <!-- Estilos inline -->
   <style>
     html, body {
       background-color: #000000;
@@ -51,68 +43,14 @@
       padding: 0;
     }
   </style>
-  
-  <!-- Schema.org: NightClub + Menu + Reservas -->
+  <!-- Schema.org: NightClub + Reservas + Menu -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "NightClub",
     "name": "Discoteca La Logia",
-    "image": "https://discotecalalogia-med.momentospro.com/recursos/media/index/hero_discoteca_la_logia.avif",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Cra. 70 #44-42, Laureles - Estadio",
-      "addressLocality": "Medellín",
-      "addressRegion": "Antioquia",
-      "postalCode": "050031",
-      "addressCountry": "CO"
-    },
-    "telephone": "+57-320-287-7325",
-    "openingHours": [
-      "We 21:30-03:40",
-      "Th 21:30-03:40",
-      "Fr 21:30-03:40",
-      "Sa 21:30-03:40",
-      "Su 21:30-03:40",
-      "PH 21:30-03:40"
-    ],
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-        "opens": "00:00",
-        "closes": "23:59",
-        "description": "Reservas disponibles 24 horas"
-      }
-    ],
     "url": "https://discotecalalogia-med.momentospro.com",
-    "priceRange": "$$$",
-    "sameAs": [
-      "https://www.facebook.com/LaLogiaDiscoteca/?locale=es_LA",
-      "https://www.instagram.com/lalogia.med/?hl=es"
-    ],
-    "hasMenu": {
-      "@type": "Menu",
-      "name": "Carta de Licores",
-      "hasMenuSection": [
-        {
-          "@type": "MenuSection",
-          "name": "Whiskies",
-          "hasMenuItem": [
-            { "@type": "MenuItem", "name": "Johnnie Walker Black Label" },
-            { "@type": "MenuItem", "name": "Chivas Regal 12 años" }
-          ]
-        },
-        {
-          "@type": "MenuSection",
-          "name": "Cócteles",
-          "hasMenuItem": [
-            { "@type": "MenuItem", "name": "Mojito" },
-            { "@type": "MenuItem", "name": "Caipirinha" }
-          ]
-        }
-      ]
-    }
+    "hasMenu": "https://discotecalalogia-med.momentospro.com/recursos/json/global/menu.json"
   }
   </script>
 </head>
