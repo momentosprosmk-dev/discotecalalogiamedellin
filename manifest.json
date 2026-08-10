@@ -7,19 +7,19 @@
   "theme_color": "#0a3d62",
   "icons": [
     {
-      "src": "/recursos/media/global/favicon_discoteca_la_logia.ico",
+      "src": "/recursos/media/global/pwa_discoteca_la_logia_48x48.png",
       "sizes": "48x48",
-      "type": "image/x-icon"
+      "type": "image/png"
     },
     {
-      "src": "/recursos/media/global/favicon_discoteca_la_logia.ico",
+      "src": "/recursos/media/global/pwa_discoteca_la_logia_192x192.png",
       "sizes": "192x192",
-      "type": "image/x-icon"
+      "type": "image/png"
     },
     {
-      "src": "/recursos/media/global/favicon_discoteca_la_logia.ico",
+      "src": "/recursos/media/global/pwa_discoteca_la_logia_512x512.png",
       "sizes": "512x512",
-      "type": "image/x-icon"
+      "type": "image/png"
     }
   ]
 }
