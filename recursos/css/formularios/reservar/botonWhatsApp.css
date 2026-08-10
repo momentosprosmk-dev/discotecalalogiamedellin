@@ -48,7 +48,7 @@
   font-size: 20px;
 }
 
-/* ================================ RESPONSIVE ================================ */
+/* --- RESPONSIVE --- */
 /* Pantallas menores a 1024px (Móvil) */
 @media (max-width: 1024px) {
   #submitBtn {
@@ -56,7 +56,6 @@
     justify-content: center;
   }
 }
-
 /* Pantallas mayores a 1024px (PC) */
 @media (min-width: 1024px) {
   #submitBtn {

@@ -1,32 +1,26 @@
 /*base.css*/
 
-/* ================================ CONFIGURACIÓN GENERAL ================================ */
+/* --- CONFIGURACIÓN GENERAL --- */
 :root {
   --font-family: 'Montserrat', sans-serif;
-  
   --logo-height: 70px;
-
   --header-height: 90px;
   --header-padding-vertical: 10px;
   --header-padding-horizontal: 18px;
   --header-font-size-titulo: 35px;
-
   --footer-height: 90px;
   --footer-padding-vertical: 10px;
   --footer-padding-horizontal: 18px;
-
   --form-reservar-font-size-label: 23px;
   --form-reservar-font-size-input: 22px;
   --form-reservar-font-size-notas-titulo: 18px;
   --form-reservar-font-size-notas-texto: 17px;
-
   --form-licores-font-size-titulo: 23px;
   --form-licores-font-size-tipo: 22px;
   --form-licores-font-size-descripcion: 22px;
   --form-licores-font-size-precio: 23px;
   --form-licores-height-img: 150px;
   --form-licores-width-img: 150px;
-
   --negro: #000000;
   --negro-oscuro: #0d0d0d;
   --negro-claro: #1a1a1a;
@@ -39,45 +33,16 @@
   --rojo: #FF0000;
   --rojo-oscuro: #b30000;
   --rojo-claro: #ff4d4d;
-
-
-
-
-  
-  
-  
-  
-
-
-
-  --xxxnegro-transparente: ;
-  --xxxgris: #242121;
-  --xxxgris-claro: rgba(255,255,255,0.1);
-  --xxxgris-claro2: #aaa;
-  --xxxgris-claro3: #ccc;
-  --xxxrojo-vivo: #E50914;
-  --xxxrojo-neutro: rgba(229, 9, 20, 0.6);
-  --xxxrojo-oscuro: #b30000;
-  --xxxrojo-transparente6: rgba(0,0,0,0.6);
-  --xxxrojo-transparente25:rgba(0,0,0,0.25);
-  --xxxrojo-oscuro-profu: rgba(255, 0, 0, 0);
-  --xxxrojo-oscuro-profundo: #6e1f1f;
-  --xxxrojo-oscuro-vivo: #822626;
-  --xxxblanco: #FFFFFF;
-  --xxxblanco-oscuro: #f4f4f4;
-  --xxxblanco-white-smoke: #f5f5f5;
-  --xxxblanco-opaco:rgba(255,255,255,0.08);
 }
 
-
-/* ================================ ESTRUCTURA GENERAL DE ARCHIVO ================================ */
+/* --- ESTRUCTURA GENERAL DE ARCHIVO --- */
 html {
   background-color: #000000;
   color: #000000;
   font-family: var(--font-family);
 }
 
-/* ================================ RESPONSIVE ================================ */
+/* --- RESPONSIVE --- */
 /* Pantallas menores a 1024px (Movil) */
 @media (max-width: 1024px) {
   :root {
@@ -85,22 +50,18 @@ html {
     --header-font-size-titulo: 24px;
     --footer-height: 55px;
     --logo-height: 45px;
-
     --form-reservar-font-size-label: 21px;
     --form-reservar-font-size-input: 19px;
     --form-reservar-font-size-notas-titulo: 17px;
     --form-reservar-font-size-notas-texto: 16px;
-
     --form-licores-font-size-titulo: 21px;
     --form-licores-font-size-tipo: 18px;
     --form-licores-font-size-descripcion: 18px;
     --form-licores-font-size-precio: 20px;
     --form-licores-height-img: 120px;
     --form-licores-width-img: 120px;
-
   }
 }
-
 /* Pantallas mayores a 1024px (PC) */
 @media (min-width: 1024px) {
 }

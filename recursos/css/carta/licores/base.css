@@ -81,7 +81,7 @@ body {
   text-align: right;
   align-self: flex-end;
 }
-/* ================================ RESPONSIVE ================================ */
+/* --- RESPONSIVE --- */
 /* Pantallas menores a 1024px (Movil) */
 @media (max-width: 1024px) {
   .logo {

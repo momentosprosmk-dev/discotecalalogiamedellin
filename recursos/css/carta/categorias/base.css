@@ -1,6 +1,6 @@
 /*base.css | Estilo principa, de categorías*/
 
-/* ================================ Fondo y tipografía general ================================ */
+/* --- Fondo y tipografía general --- */
 body {
   margin: 0;
   display: flex;
@@ -8,8 +8,7 @@ body {
   height: 100vh;
   background: url('../../../media/carta/carta.avif') no-repeat center center fixed;
 }
-
-/* ================================ CONTENEDOR PRINCIPAL ================================ */
+/* --- CONTENEDOR PRINCIPAL --- */
 .section-scroll {
   background-position: top;
   flex: 1;
@@ -63,7 +62,7 @@ body {
   filter: drop-shadow(0 0 15px var(--rojo)) brightness(1.2);
   box-shadow: 0 0 20px var(--rojo);
 }
-/* ================================ RESPONSIVE ================================*/
+/* --- RESPONSIVE ---
 /* Pantallas menores a 1024px (Movil) */
 @media (max-width: 1024px) {
   .categorias {

@@ -1,6 +1,6 @@
 /* badgenn.css | HTML badgen NN*/
 
-/* ================================ ESTRUCTURA GLOBAL ================================ */
+/* --- ESTRUCTURA GLOBAL --- */
 html, body {
   width: 100%;
   height: 100%;
@@ -19,7 +19,7 @@ html, body {
   flex-direction: column;
 }
 
-/* ================================ CONTENEDOR DE QR'S ================================ */
+/* --- CONTENEDOR DE QR'S --- */
 .qr-container {
   flex: 1;
   display: flex;
@@ -30,7 +30,6 @@ html, body {
   width: 100%;
   background: transparent;
 }
-
 /* Scroll horizontal personalizado para QR */
 .qr-container::-webkit-scrollbar {
   height: 12px;
@@ -46,7 +45,6 @@ html, body {
 .qr-container::-webkit-scrollbar-thumb:hover {
   background: #f20606;
 }
-
 /* Diseño del contenedor */
 .qr-card {
   position: relative;
@@ -98,13 +96,4 @@ html, body {
   margin: 0 0 2rem 0;
   letter-spacing: 1px;
   text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
-}
-
-/* ================================ RESPONSIVE ================================ */
-/* Pantallas menores a 1024px (Movil) */
-@media (max-width: 1024px) {
-}
-
-/* Pantallas mayores a 1024px (PC) */
-@media (min-width: 1024px) {
 }

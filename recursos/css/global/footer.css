@@ -1,6 +1,6 @@
 /*footer.css* | General */
 
-/* ================================ FOOTER MOVIL ================================*/
+/* --- FOOTER MOVIL --- */
 /*Footer pegado a la parte inferior*/
 .footer-movil {
   display: flex;
@@ -43,7 +43,7 @@
 }
 
 
-/* ================================ FOOTER PC ================================*/
+/* --- FOOTER PC --- */
 /*Estilo principal*/
 footer {
   position: relative;
@@ -95,7 +95,6 @@ footer {
 .footer-brand-logo {
   height: 100px;
   width: auto;
-  filter: drop-shadow(0 0 6px rgba(255, 0, 0, 0.6));
 }
 /*Lema*/
 .footer-brand-text {
@@ -174,14 +173,13 @@ footer {
   color: var(--gris-claro);
 }
 
-/* ================================ RESPONSIVE ================================*/
+/* --- RESPONSIVE --- */
 /*Pantallas menores a 1024px*/
 @media (max-width: 1024px) {
   .footer-pc {
     display: none;
   }
 }
-
 /*Pantallas mayores a 1024px*/
 @media (min-width: 1024px) {
   .footer-movil {

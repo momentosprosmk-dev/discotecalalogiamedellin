@@ -1,6 +1,6 @@
 /*menu.css*/
 
-/*=============== Menú lateral de opciones ===============*/
+/* --- Menú lateral de opciones --- */
 /* Overlay */
 .overlay {
   position: fixed;
@@ -75,7 +75,7 @@
   color: var(--blanco);
 }
 
-/* ================================ RESPONSIVE ================================ */
+/* --- RESPONSIVE --- */
 /* Desactiva Hover en pantallas táctiles */
 @media (hover: none) {
   .btn-opciones:hover {

@@ -1,6 +1,6 @@
 /* contacto.css */
 
-/* ================================ SELECCIÓN DE PAÍS ================================ */
+/* --- SELECCIÓN DE PAÍS --- */
 .sugerencias {
   position: relative;
   top: 100%;
@@ -53,7 +53,7 @@
   flex: 1;
   color: inherit;
 }
-/* ================================ INGRESAR NÚMERO DE CONTACTO ================================ */
+/* --- INGRESAR NÚMERO DE CONTACTO --- */
 .telefono-container {
   display: flex;
   flex-direction: column;
@@ -70,7 +70,6 @@
   color: var(--blanco-oscuro);
   transition: border-color 0.3s, background 0.3s;
 }
-
 .numero-contacto input:focus {
   background: rgba(0,0,0,0.6);
   border: 1px solid var(--rojo-oscuro);

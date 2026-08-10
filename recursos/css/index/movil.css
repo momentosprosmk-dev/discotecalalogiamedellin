@@ -1,6 +1,6 @@
 /*movil.css*/
 
-/* ================================ MOVIL ================================ */
+/* --- MOVIL --- */
 /*Contenedor con scroll*/
 .section-scroll {
   position: fixed;
@@ -54,7 +54,7 @@
   overflow-y: auto;
 }
 
-/* ================================ RESPONSIVE ================================*/
+/* --- RESPONSIVE --- */
 /* Pantallas menores a 1024px (Movil) */
 @media (max-width: 1024px) {
   .section-scroll {

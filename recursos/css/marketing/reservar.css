@@ -1,5 +1,4 @@
 /* reservar.css | estilos específicos del banner de reserva */
-
 /* Botón de reservar sobre la imagen */
 .btn-reservar {
   position: absolute;
@@ -25,7 +24,7 @@
   box-shadow: 0 8px 20px rgba(0,0,0,0.8), inset 0 3px 6px rgba(255,255,255,0.25);
 }
 
-/* ================================ PC ================================ */
+/* --- PC --- */
 @media (min-width: 1025px) {
   .btn-reservar {
     padding: 1rem 2.5rem;

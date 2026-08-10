@@ -1,6 +1,6 @@
 /*base.css*/
 
-/* ================================ CONTENEDOR DE FORMULARIO ================================ */
+/* --- CONTENEDOR DE FORMULARIO --- */
 .menu {
   position: relative;
   padding: 40px;
@@ -12,7 +12,7 @@
   margin: 0 auto;
 }
 
-/* ================================ ESTILOS DE FORMULARIO ================================ */
+/* --- ESTILOS DE FORMULARIO --- */
 form { 
   display: flex; 
   flex-direction: column; 
@@ -62,16 +62,16 @@ form {
 
 .field input:focus,
 .field select:focus {
-  background: rgba(0,0,0,0.6); /* fondo más intenso */
-  border: 1px solid var(--rojo-oscuro); /* borde rojo elegante */
-  box-shadow: 0 0 8px rgba(255,77,77,0.4); /* glow rojo claro sutil */
+  background: rgba(0,0,0,0.6);
+  border: 1px solid var(--rojo-oscuro);
+  box-shadow: 0 0 8px rgba(255,77,77,0.4);
   color: var(--blanco);
   outline: none;
-  transition: all 0.3s ease; /* transición suave */
+  transition: all 0.3s ease
 }
 
 
-/* ================================ ZONA SELECCIONADA ================================ */
+/* --- ZONA SELECCIONADA --- */
 .nota {
   margin-top: 8px;
   font-size: var(--form-reservar-font-size-notas-titulo);
@@ -90,7 +90,7 @@ form {
   margin-bottom: 2px;
 }
 
-/* ================================ CONTACTO ================================ */
+/* --- CONTACTO --- */
 /* Teléfono */
 .telefono-container {
   display: flex;
@@ -127,7 +127,7 @@ button.disabled {
   cursor: not-allowed;
 }
 
-/* ================================ RESPONSIVE ================================ */
+/* --- RESPONSIVE --- */
 @media (max-width: 1024px) {
   .menu {
     padding-bottom: 80px;

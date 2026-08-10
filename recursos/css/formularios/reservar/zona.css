@@ -1,6 +1,6 @@
 /*zona.css*/
 
-/* ================================ ZONA SELECCIONADA ================================ */
+/* --- ZONA SELECCIONADA --- */
 .nota {
   margin-top: 8px;
   font-size: var(--form-reservar-font-size-notas-titulo);
@@ -17,13 +17,4 @@
 }
 .nota li {
   margin-bottom: 2px;
-}
-
-/* ================================ RESPONSIVE ================================ */
-/* Pantallas menores a 1024px (Movil) */
-@media (max-width: 1024px) {
-}
-
-/* Pantallas mayores a 1024px (PC) */
-@media (min-width: 1024px) {
 }

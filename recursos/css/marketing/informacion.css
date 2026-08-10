@@ -1,9 +1,7 @@
 /* informacion.css | estilos específicos del banner de información */
-
 .bn-info-content {
   box-shadow: 0 0 25px rgba(176,0,0,0.7);
 }
-
 .bn-info-content strong {
   color: #ff3333;
 }

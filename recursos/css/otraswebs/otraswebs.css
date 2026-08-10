@@ -1,6 +1,6 @@
 /*otraswebs.css*/
 
-/* ================================ FONDO Y TIPOGRAFÍA ================================ */
+/* --- FONDO Y TIPOGRAFÍA --- */
 body {
   margin: 0;
   padding: 0;
@@ -12,7 +12,7 @@ body {
   flex-direction: column;
 }
 
-/* ================================ CONTENEDOR WEB ================================ */
+/* --- CONTENEDOR WEB --- */
 /* Contenedor principal */
 .contenedor {
   width: 100%;
@@ -43,14 +43,10 @@ iframe.visor::-webkit-scrollbar {
   background: transparent;
 }
 
-/* ================================ RESPONSIVE ================================ */
+/* --- RESPONSIVE --- */
 /* Pantallas menores a 1024px (Movil) */
 @media (max-width: 1024px) {
   .contenedor {
     display: block;
   }
-}
-
-/* Pantallas mayores a 1024px (PC) */
-@media (min-width: 1024px) {
 }

@@ -1,6 +1,6 @@
 /*hero.css*/
 
-/* ================================ HERO ================================ */
+/* --- HERO --- */
 .hero {
   display: flex;
   justify-content: center;
@@ -29,7 +29,7 @@
   flex-direction: row;
   gap: 30px;
   align-items: flex-start;
-  margin-top: 20%;
+  margin-top: 10%;
   margin-left: 0;
 }
 /* Columna izquierda (QR) | Contenedor de QR*/
@@ -47,8 +47,8 @@
 }
 /* Columna izquierda (QR) | Imagenes*/
 .qr-box img {
-  width: 220px;
-  height: 220px;
+  width: 150px;
+  height: 150px;
 }
 /* Columna izquierda (QR) | Texto*/
 .qr-box span {
@@ -70,7 +70,7 @@
   flex-direction: column;
   gap: 25px;
   align-items: flex-end;
-  margin-top: 20%;
+  margin-top: 10%;
   margin-right: 5%;
 }
 /* Columna derecha (Botones) | Grupo*/
@@ -99,7 +99,7 @@
   transform: scale(1.05);
 }
 
-/* ================================ TEXTO ================================ */
+/* --- TEXTO --- */
 .hero p,
 .hero .btn-group {
   position: relative;
@@ -116,14 +116,10 @@
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
 }
 
-/* ================================ RESPONSIVE ================================ */
+/* --- RESPONSIVE --- */
 /* Pantallas menores a 1024px (Movil) */
 @media (max-width: 1024px) {
   .hero {
     display: none;
   }
-}
-
-/* Pantallas mayores a 1024px (PC) */
-@media (min-width: 1024px) {
 }

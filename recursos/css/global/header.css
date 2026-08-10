@@ -1,6 +1,6 @@
 /*header.css*/
 
-/* ================================ HEADER GENERAL ================================*/
+/* --- HEADER GENERAL --- */
 .header {
   display: flex;
   justify-content: space-between;
@@ -49,7 +49,7 @@
   height: var(--logo-height);
 }
 
-/* ================================ HEADER | NAVEGACIÓN PC ================================*/
+/* --- HEADER | NAVEGACIÓN PC --- */
 /* Navegación */
 .nav ul {
   list-style: none;
@@ -87,7 +87,7 @@
   width: 100%;
 }
 
-/* ================================ HEADER | NAVEGACIÓN MOVIL ================================*/
+/* --- HEADER | NAVEGACIÓN MOVIL --- */
 /*Botón Menú desplegable*/
 .menu-btn {
   display: none;
@@ -110,7 +110,7 @@
   outline: none;
 }
 
-/* ================================ HEADER | RESPONSIVE ================================*/
+/* --- HEADER | RESPONSIVE --- */
 /* Pantallas menores a 1024px (Movil) */
 @media (max-width: 1024px) {
   .header {
@@ -121,15 +121,12 @@
     top: 0;
     z-index: 100;
   }
-
   .logo {
     margin: auto;
   }
-
   .nav ul, .header::after{
     display: none;
   }
-
   .nav.active ul {
     display: flex;
     flex-direction: column;
@@ -138,7 +135,6 @@
     padding: 20px;
     border-radius: 8px;
   }
-
   .menu-btn {
     display: block;
     position: absolute;
@@ -150,8 +146,4 @@
     cursor: pointer;
     transition: 0.3s;
   }
-}
-
-/* Pantallas mayores a 1024px (PC) */
-@media (min-width: 1024px) {
 }
