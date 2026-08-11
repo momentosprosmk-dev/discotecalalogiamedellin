@@ -50,9 +50,61 @@
     "@type": "NightClub",
     "name": "Discoteca La Logia",
     "url": "https://discotecalalogia-med.momentospro.com",
+    "image": "https://discotecalalogia-med.momentospro.com/recursos/media/global/pwa_discoteca_la_logia_512x512.png",
+    "description": "La hermandad del perreo en Medellín: reserva tu mesa VIP o general, explora nuestra carta de licores premium y disfruta de noches intensas de reguetón y fiesta sin límites.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Cra. 70 #44-42, Laureles - Estadio",
+      "addressLocality": "Medellín",
+      "addressRegion": "Antioquia",
+      "postalCode": "050031",
+      "addressCountry": "CO"
+    },
+    "telephone": "+57-320-287-7325",
+    "priceRange": "$$",
+    "openingHours": [
+      "We 21:30-03:40",
+      "Th 21:30-03:40",
+      "Fr 21:30-03:40",
+      "Sa 21:30-03:40",
+      "Su 21:30-03:40",
+      "PH 21:30-03:40"
+    ],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59",
+        "description": "Reservas disponibles 24 horas"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/LaLogiaDiscoteca/?locale=es_LA",
+      "https://www.instagram.com/lalogia.med/?hl=es"
+    ],
+    "potentialAction": {
+      "@type": "ReserveAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://discotecalalogia-med.momentospro.com/formularios/reservar/",
+        "inLanguage": "es",
+        "actionPlatform": [
+          "http://schema.org/DesktopWebPlatform",
+          "http://schema.org/MobileWebPlatform"
+        ]
+      },
+      "result": {
+        "@type": "Reservation",
+        "name": "Reserva de mesa en Discoteca La Logia"
+      }
+    },
     "hasMenu": "https://discotecalalogia-med.momentospro.com/recursos/json/global/menu.json"
   }
   </script>
+
 </head>
 
 <body>
