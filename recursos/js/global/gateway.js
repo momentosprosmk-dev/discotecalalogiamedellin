@@ -6,7 +6,7 @@
     "btn-whatsapp": "https://wa.me/573202877325?text=Hola.%20Quiero%20vivir%20una%20experiencia%20en%20La%20Logia.%20%C2%BFMe%20pueden%20orientar%3F",
     "btn-instagram": "https://www.instagram.com/lalogia.med/?hl=es",
     "btn-facebook": "https://www.facebook.com/LaLogiaDiscoteca/?locale=es_LA",
-    "media": "https://momentosprosmk-dev.github.io/discotecalalogia-med-media/recursos/media/",
+    "media": "https://momentosprosmk-dev.github.io/discotecalalogiamedellin-media/recursos/media/",
     "numero-local": "573202877325",
   };
 

@@ -48,12 +48,12 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="item-body">
               <div class="item-left">
                 <picture>
-                  <source srcset="https://momentosprosmk-dev.github.io/discotecalalogia-med-media/recursos/media/carta/${imagen}.avif" media="(max-width: 1024px)">
-                  <source srcset="https://momentosprosmk-dev.github.io/discotecalalogia-med-media/recursos/media/carta/${imagen}_pc.avif" media="(min-width: 1025px)">
+                  <source srcset="https://momentosprosmk-dev.github.io/discotecalalogiamedellin-media/recursos/media/carta/${imagen}.avif" media="(max-width: 1024px)">
+                  <source srcset="https://momentosprosmk-dev.github.io/discotecalalogiamedellin-media/recursos/media/carta/${imagen}_pc.avif" media="(min-width: 1025px)">
                   <!-- fallback -->
-                  <img src="https://momentosprosmk-dev.github.io/discotecalalogia-med-media/recursos/media/carta/${imagen}_pc.avif" 
+                  <img src="https://momentosprosmk-dev.github.io/discotecalalogiamedellin-media/recursos/media/carta/${imagen}_pc.avif" 
                       alt="${nombre}" 
-                      onerror="this.src='../../recursos/media/carta/nohayimagen.avif'">
+                      onerror="this.src='/recursos/media/carta/nohayimagen.avif'">
                 </picture>
               </div>
               <div class="item-right">

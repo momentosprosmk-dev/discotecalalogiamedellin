@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
 // Función para Banner de Marketing
 async function validarMarketing() {
   const archivos = [
-    `https://momentosprosmk-dev.github.io/discotecalalogia-med-media/recursos/media/marketing/${baseMarketing}.1.avif`,
-    `https://momentosprosmk-dev.github.io/discotecalalogia-med-media/recursos/media/marketing/${baseMarketing}.2.avif`
+    `https://momentosprosmk-dev.github.io/discotecalalogiamedellin-media/recursos/media/marketing/${baseMarketing}.1.avif`,
+    `https://momentosprosmk-dev.github.io/discotecalalogiamedellin-media/recursos/media/marketing/${baseMarketing}.2.avif`
   ];
 
   let encontrado = null;
