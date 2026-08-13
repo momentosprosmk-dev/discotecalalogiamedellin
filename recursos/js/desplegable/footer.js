@@ -13,7 +13,7 @@ function initFooter() {
   if (footerTyc) {
     footerTyc.addEventListener("click", (e) => {
       e.preventDefault();
-      window.location.href = basePath + "smk/tyc/";
+      window.location.href = "smk/tyc/";
     });
   }
 }

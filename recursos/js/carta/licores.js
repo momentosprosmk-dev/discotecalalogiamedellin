@@ -2,13 +2,13 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   
-  if (!window.enlaces.hasOwnProperty(baseLicor)) {
-    console.error(`El baseLicor "${baseLicor}" no existe dentro de las claves de window.enlaces`);
-    alert(`Error: El baseLicor "${baseLicor}" no existe en la configuración`);
+  if (!window.enlaces.hasOwnProperty(baseIndex)) {
+    console.error(`El baseIndex "${baseIndex}" no existe dentro de las claves de window.enlaces`);
+    alert(`Error: El baseIndex "${baseIndex}" no existe en la configuración`);
     return;
   }
 
-  const url = window.enlaces[baseLicor];
+  const url = window.enlaces[baseIndex];
 
   const clean = (v) => v.replace(/^\s*"?|"?\s*$/g, "").replace(/\r/g, "");
   const formatearPrecio = (valor) => {

@@ -2,11 +2,10 @@
 
 async function loadUserPage() {
   const username = localStorage.getItem("badge_user");
-  const path = typeof basePath !== "undefined" ? basePath : "";
 
   if (!username || username.trim() === "") {
     console.log("No hay usuario en cache → redirigiendo");
-    window.location.href = path + "servicio/";
+    window.location.href = "/servicio/";
     return;
   }
 
@@ -40,9 +39,9 @@ async function loadUserPage() {
       console.log("Usuario no encontrado o inactivo .Cache limpiado");
     }
 
-    window.location.href = path + "servicio/";
+    window.location.href = "/servicio/";
   } catch (err) {
     console.error("Error cargando TSV:", err);
-    window.location.href = path + "servicio/";
+    window.location.href = "/servicio/";
   }
 }

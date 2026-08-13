@@ -1,7 +1,7 @@
 // badge_login.js | Gestiona el banner de Badge
 
 // Definir rutas de scripts
-var badgeStartIndexPath = basePath + "recursos/js/servicio/badgeStartIndex.js";
+var badgeStartIndexPath = "/recursos/js/servicio/badgeStartIndex.js";
 
 function initBadgeLoginBanner() {
   const banner = document.getElementById("badge-login-banner");

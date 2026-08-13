@@ -2,7 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   const scriptGateway = document.createElement("script");
-  scriptGateway.src = basePath + "smk/recursos/js/global/gateway.js";
+  scriptGateway.src = "/smk/recursos/js/global/gateway.js";
 
   scriptGateway.onload = () => {
     console.log("gateway.js cargado, tyc_fecha:", window.tyc_fecha);
@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
 // Función para Banner de Marketing
 async function validarMarketing() {
   const archivos = [
-    `https://momentosprosmk-dev.github.io/discotecalalogiamedellin-media/recursos/media/marketing/${baseMarketing}.1.avif`,
-    `https://momentosprosmk-dev.github.io/discotecalalogiamedellin-media/recursos/media/marketing/${baseMarketing}.2.avif`
+    `https://momentosprosmk-dev.github.io/discotecalalogiamedellin-media/recursos/media/marketing/${baseIndex}.1.avif`,
+    `https://momentosprosmk-dev.github.io/discotecalalogiamedellin-media/recursos/media/marketing/${baseIndex}.2.avif`
   ];
 
   let encontrado = null;
@@ -53,15 +53,15 @@ async function validarMarketing() {
     let htmlRuta = "";
 
     if (nombreArchivo.endsWith(".1.avif")) {
-      htmlRuta = `${basePath}recursos/html/marketing/informacion.html`;
+      htmlRuta = `/recursos/html/marketing/informacion.html`;
     } else if (nombreArchivo.endsWith(".2.avif")) {
-      htmlRuta = `${basePath}recursos/html/marketing/reservar.html`;
+      htmlRuta = `/recursos/html/marketing/reservar.html`;
     }
 
     localStorage.setItem("avisoHtml", htmlRuta);
 
     const script = document.createElement("script");
-    script.src = `${basePath}recursos/js/marketing/banner.js`;
+    script.src = `/recursos/js/marketing/banner.js`;
     document.body.appendChild(script);
   } else {
     document.getElementById("marketing-container").style.display = "none";
@@ -71,13 +71,13 @@ async function validarMarketing() {
 // Función de TYC
 function iniciarBannerTyCLoad() {
   window.bannerConfig = {
-    cssRuta: basePath + "smk/recursos/css/tyc/banner.css",
-    linkRuta: basePath + "smk/tyc/",
-    rechazarRuta: basePath,
-    logoRuta: basePath + "smk/recursos/media/tyc/logo_momentos_pro.avif"
+    cssRuta: "/smk/recursos/css/tyc/banner.css",
+    linkRuta: "/smk/tyc/",
+    rechazarRuta: "/",
+    logoRuta: "/smk/recursos/media/tyc/logo_momentos_pro.avif"
   };
 
-  fetch(basePath + "smk/recursos/html/tyc/banner.html")
+  fetch("/smk/recursos/html/tyc/banner.html")
     .then(res => res.text())
     .then(html => {
       const container = document.getElementById("tyc-container");
@@ -98,7 +98,7 @@ function iniciarBannerTyCLoad() {
       document.head.appendChild(css);
 
       const script = document.createElement("script");
-      script.src = basePath + "smk/recursos/js/tyc/banner.js";
+      script.src = "/smk/recursos/js/tyc/banner.js";
       script.onload = () => {
         if (typeof iniciarBannerTyC === "function") {
           iniciarBannerTyC(window.tyc_fecha);

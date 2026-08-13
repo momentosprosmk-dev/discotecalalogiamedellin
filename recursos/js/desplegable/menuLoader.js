@@ -1,51 +1,41 @@
 // menuLoader.js
 
 document.addEventListener("DOMContentLoaded", () => {
-  const path = typeof basePath !== "undefined" ? basePath : "";
-
-  fetch(path + "recursos/html/desplegable/menu.html")
+  fetch("/recursos/html/desplegable/menu.html")
     .then(res => res.text())
     .then(html => {
       document.getElementById("menu-container").innerHTML = html;
-
       // Inyectar CSS del menú
       const linkMenu = document.createElement("link");
       linkMenu.rel = "stylesheet";
-      linkMenu.href = path + "recursos/css/desplegable/menu.css";
+      linkMenu.href = "/recursos/css/desplegable/menu.css";
       document.head.appendChild(linkMenu);
-
       // Cargar script del menú
       const scriptMenu = document.createElement("script");
-      scriptMenu.src = path + "recursos/js/desplegable/menu.js";
+      scriptMenu.src = "/recursos/js/desplegable/menu.js";
       document.body.appendChild(scriptMenu);
-
       scriptMenu.onload = () => {
         if (typeof initMenu === "function") {
           initMenu();
         }
       };
-
       // Cargar script de navegación de módulos
       const scriptModules = document.createElement("script");
-      scriptModules.src = path + "recursos/js/desplegable/modulesMenu.js";
+      scriptModules.src = "/recursos/js/desplegable/modulesMenu.js";
       document.body.appendChild(scriptModules);
-
       scriptModules.onload = () => {
         if (typeof initModulesNavigation === "function") {
           initModulesNavigation();
         }
       };
-
       // Cargar script de copyright
       const scriptCopyright = document.createElement("script");
-      scriptCopyright.src = path + "recursos/js/global/copyright.js";
+      scriptCopyright.src = "/recursos/js/global/copyright.js";
       document.body.appendChild(scriptCopyright);
-
       // Cargar script del footer personalizado
       const scriptFooterPc = document.createElement("script");
-      scriptFooterPc.src = path + "recursos/js/global/copyright.js";
+      scriptFooterPc.src = "/recursos/js/global/copyright.js";
       document.body.appendChild(scriptFooterPc);
-
       scriptFooterPc.onload = () => {
         if (typeof initFooter === "function") {
           initFooter();
@@ -57,4 +47,3 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch(err => console.error("Error cargando el menú:", err));
 });
-

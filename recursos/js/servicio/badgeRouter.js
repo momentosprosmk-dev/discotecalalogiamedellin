@@ -14,7 +14,7 @@ function loadBadgeContent() {
   }
 
   if (userData && userData.usr) {
-    fetch("../recursos/html/servicio/badgeuser.html")
+    fetch("/recursos/html/servicio/badgeuser.html")
       .then(res => res.text())
       .then(html => {
         container.innerHTML = html;
@@ -42,14 +42,14 @@ function loadBadgeContent() {
             photoEl.src = media + userData.imagenurl;
 
             photoEl.onerror = function() {
-              photoEl.src = basePath + "recursos/media/servicio/prueba.avif";
+              photoEl.src = "/recursos/media/servicio/prueba.avif";
             };
           }
         }
       });
 
   } else {
-    fetch("../recursos/html/servicio/badgenn.html")
+    fetch("/recursos/html/servicio/badgenn.html")
       .then(res => res.text())
       .then(html => container.innerHTML = html);
   }

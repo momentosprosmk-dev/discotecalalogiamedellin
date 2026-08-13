@@ -8,7 +8,6 @@ function normalizar(str) {
     .toLowerCase()
     .trim();
 }
-
 async function cargarIndicativos() {
   try {
     const response = await fetch("../../recursos/json/formularios/paises.json"); 
@@ -57,7 +56,6 @@ async function cargarIndicativos() {
   }
 }
 cargarIndicativos();
-
 
 // Diseño visual de número de contácto
 document.addEventListener("DOMContentLoaded", () => {

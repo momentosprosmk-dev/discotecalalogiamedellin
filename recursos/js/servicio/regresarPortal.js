@@ -2,6 +2,6 @@
 
 document.addEventListener("click", e => {
   if (e.target && e.target.id === "btn-menu") {
-    window.location.href = basePath;
+    window.location.href = "/";
   }
 });

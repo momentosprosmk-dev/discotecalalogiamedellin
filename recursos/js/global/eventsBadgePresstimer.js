@@ -3,8 +3,8 @@
 var badge_timePage = 1000;
 var badge_timeLogin = 3000;
 
-var gatewayPath = (typeof basePath !== "undefined" ? basePath : "") + "recursos/js/servicio/gateway.js";
-var badge_startIndexPath = (typeof basePath !== "undefined" ? basePath : "") + "recursos/js/servicio/badgeStartIndex.js";
+var gatewayPath = "/recursos/js/servicio/gateway.js";
+var badge_startIndexPath = "/recursos/js/servicio/badgeStartIndex.js";
 
 function initOpcionesButton() {
   const btn = document.getElementById("btn-menu");

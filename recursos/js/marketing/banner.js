@@ -27,7 +27,7 @@ async function cargarBanner() {
     }
 
     // Cargar siempre base.css
-    const baseCss = `${basePath}recursos/css/marketing/base.css`;
+    const baseCss = `/recursos/css/marketing/base.css`;
     if (!document.querySelector(`link[href="${baseCss}"]`)) {
       const linkBase = document.createElement("link");
       linkBase.rel = "stylesheet";
@@ -38,9 +38,9 @@ async function cargarBanner() {
     // Determinar CSS específico según HTML
     let cssRuta = "";
     if (rutaHtml.includes("informacion.html")) {
-      cssRuta = `${basePath}recursos/css/marketing/informacion.css`;
+      cssRuta = `/recursos/css/marketing/informacion.css`;
     } else if (rutaHtml.includes("reservar.html")) {
-      cssRuta = `${basePath}recursos/css/marketing/reservar.css`;
+      cssRuta = `/recursos/css/marketing/reservar.css`;
     }
 
     if (cssRuta && !document.querySelector(`link[href="${cssRuta}"]`)) {
