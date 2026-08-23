@@ -18,6 +18,7 @@ function initFooter() {
     });
   }
 }
+
 // Botones de redes sociales
 function initFooterSocial() {
   document.querySelectorAll(".footer-social a").forEach(el => {
@@ -28,9 +29,15 @@ function initFooterSocial() {
   });
 }
 
-// Ejecutar ambas inicializaciones al cargar el DOM
+// Cargar footer-pc y luego inicializar
 document.addEventListener("DOMContentLoaded", () => {
-  initFooter();
-  initFooterSocial();
+  fetch("/recursos/html/global/footer_pc.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-pc").innerHTML = data;
+      // Inicializar después de insertar el HTML
+      initFooter();
+      initFooterSocial();
+    })
+    .catch(err => console.error("Error cargando footer-pc:", err));
 });
-
