@@ -1,7 +1,7 @@
-//licores.js
+// licores.js
 
 document.addEventListener("DOMContentLoaded", function () {
-  
+
   if (!window.enlaces.hasOwnProperty(baseIndex)) {
     console.error(`El baseIndex "${baseIndex}" no existe dentro de las claves de window.enlaces`);
     alert(`Error: El baseIndex "${baseIndex}" no existe en la configuración`);
@@ -10,28 +10,66 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const url = window.enlaces[baseIndex];
 
-  const clean = (v) => v.replace(/^\s*"?|"?\s*$/g, "").replace(/\r/g, "");
+  const clean = (v) =>
+    v.replace(/^\s*"?|"?\s*$/g, "").replace(/\r/g, "");
+
   const formatearPrecio = (valor) => {
     const numero = parseFloat(valor);
     if (isNaN(numero)) return valor;
-    return numero.toLocaleString('es-CO');
+    return numero.toLocaleString("es-CO");
+  };
+
+  const obtenerImagen = (imagen) => {
+    const base =
+      "https://momentosprosmk-dev.github.io/discotecalalogiamedellin-media/recursos/media/carta/";
+
+    const esMovil = window.matchMedia("(max-width: 1024px)").matches;
+
+    return esMovil
+      ? `${base}${imagen}.avif`
+      : `${base}${imagen}_pc.avif`;
+  };
+
+  const cargarImagen = (img, imagen) => {
+
+    const imagenPrincipal = obtenerImagen(imagen);
+    const imagenRespaldo = "/recursos/media/carta/nohayimagen.avif";
+
+    img.onerror = function () {
+      this.onerror = null;
+      this.src = imagenRespaldo;
+    };
+
+    img.src = imagenPrincipal;
   };
 
   fetch(url, { cache: "no-store" })
     .then(res => res.text())
     .then(text => {
-      const lines = text.split("\n").filter(l => l.trim().length > 0);
-      const headers = lines[0].split("\t").map(h => clean(h).toLowerCase());
+
+      const lines = text
+        .split("\n")
+        .filter(l => l.trim().length > 0);
+
+      const headers = lines[0]
+        .split("\t")
+        .map(h => clean(h).toLowerCase());
+
       const iTipo = headers.indexOf("tipo");
       const iNombre = headers.indexOf("nombre");
       const iDesc = headers.indexOf("descripcion");
       const iPrecio = headers.indexOf("precio");
       const iImagen = headers.indexOf("imagenurl");
       const iEstado = headers.indexOf("estado");
+
       const menu = document.getElementById("menu");
 
       lines.slice(1).forEach(line => {
-        const cols = line.split("\t").map(c => clean(c));
+
+        const cols = line
+          .split("\t")
+          .map(c => clean(c));
+
         const tipo = cols[iTipo] || "";
         const nombre = cols[iNombre] || "";
         const descripcion = cols[iDesc] || "";
@@ -40,31 +78,47 @@ document.addEventListener("DOMContentLoaded", function () {
         const estado = (cols[iEstado] || "").toLowerCase();
 
         if (estado === "d") {
+
           const item = document.createElement("div");
           item.className = "item";
+
           item.innerHTML = `
             <h3>${nombre}</h3>
+
             <div class="tipo">${tipo}</div>
+
             <div class="item-body">
+
               <div class="item-left">
-                <picture>
-                  <source srcset="https://momentosprosmk-dev.github.io/discotecalalogiamedellin-media/recursos/media/carta/${imagen}.avif" media="(max-width: 1024px)">
-                  <source srcset="https://momentosprosmk-dev.github.io/discotecalalogiamedellin-media/recursos/media/carta/${imagen}_pc.avif" media="(min-width: 1025px)">
-                  <!-- fallback -->
-                  <img src="https://momentosprosmk-dev.github.io/discotecalalogiamedellin-media/recursos/media/carta/${imagen}_pc.avif" 
-                      alt="${nombre}" 
-                      onerror="this.src='/recursos/media/carta/nohayimagen.avif'">
-                </picture>
+                <img
+                  alt="${nombre}"
+                >
               </div>
+
               <div class="item-right">
-                <div class="descripcion"><p>${descripcion}</p></div>
-                <div class="price">COP $ ${formatearPrecio(precio)}</div>
+
+                <div class="descripcion">
+                  <p>${descripcion}</p>
+                </div>
+
+                <div class="price">
+                  COP $ ${formatearPrecio(precio)}
+                </div>
+
               </div>
+
             </div>
           `;
+
+          const img = item.querySelector(".item-left img");
+
+          cargarImagen(img, imagen);
+
           menu.appendChild(item);
         }
       });
     })
-    .catch(err => console.error("Error al cargar datos:", err));
+    .catch(err =>
+      console.error("Error al cargar datos:", err)
+    );
 });
