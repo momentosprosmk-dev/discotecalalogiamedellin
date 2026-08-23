@@ -20,27 +20,15 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   const obtenerImagen = (imagen) => {
+
     const base =
       "https://momentosprosmk-dev.github.io/discotecalalogiamedellin-media/recursos/media/carta/";
 
-    const esMovil = window.matchMedia("(max-width: 1024px)").matches;
+    if (window.innerWidth <= 1024) {
+      return `${base}${imagen}.avif`;
+    }
 
-    return esMovil
-      ? `${base}${imagen}.avif`
-      : `${base}${imagen}_pc.avif`;
-  };
-
-  const cargarImagen = (img, imagen) => {
-
-    const imagenPrincipal = obtenerImagen(imagen);
-    const imagenRespaldo = "/recursos/media/carta/nohayimagen.avif";
-
-    img.onerror = function () {
-      this.onerror = null;
-      this.src = imagenRespaldo;
-    };
-
-    img.src = imagenPrincipal;
+    return `${base}${imagen}_pc.avif`;
   };
 
   fetch(url, { cache: "no-store" })
@@ -77,9 +65,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const imagen = cols[iImagen] || "";
         const estado = (cols[iEstado] || "").toLowerCase();
 
+
         if (estado === "d") {
 
           const item = document.createElement("div");
+
           item.className = "item";
 
           item.innerHTML = `
@@ -90,9 +80,13 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="item-body">
 
               <div class="item-left">
+
                 <img
+                  src="${obtenerImagen(imagen)}"
                   alt="${nombre}"
+                  onerror="this.onerror=null; this.src='/recursos/media/carta/nohayimagen.avif';"
                 >
+
               </div>
 
               <div class="item-right">
@@ -110,15 +104,14 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
           `;
 
-          const img = item.querySelector(".item-left img");
-
-          cargarImagen(img, imagen);
-
           menu.appendChild(item);
         }
+
       });
+
     })
     .catch(err =>
       console.error("Error al cargar datos:", err)
     );
+
 });
