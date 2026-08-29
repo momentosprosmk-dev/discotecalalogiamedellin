@@ -21,8 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const obtenerImagen = (imagen) => {
 
-    const base =
-      "https://momentosprosmk-dev.github.io/discotecalalogiamedellin-media/recursos/media/carta/";
+    const base = "https://momentosprosmk-dev.github.io/discotecalalogiamedellin-media/recursos/media/carta/";
 
     if (window.innerWidth <= 1024) {
       return `${base}${imagen}.avif`;
