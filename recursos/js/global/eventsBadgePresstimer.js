@@ -58,6 +58,10 @@ function initOpcionesButton() {
 }
 
 function loadGateway(callback) {
+  if (window.cargarJS) {
+    window.cargarJS(gatewayPath, callback);
+    return;
+  }
   const gatewayScript = document.createElement("script");
   gatewayScript.src = gatewayPath;
   gatewayScript.onload = () => {
@@ -67,15 +71,20 @@ function loadGateway(callback) {
 }
 
 function loadBadgeStartIndex() {
-  const startIndexScript = document.createElement("script");
-  startIndexScript.src = badge_startIndexPath;
-  startIndexScript.onload = () => {
+  const onReady = () => {
     if (typeof loadUserPage === "function") {
       loadUserPage();
     } else {
       console.error("badgeStartIndex.js cargado, pero no definió loadUserPage");
     }
   };
+  if (window.cargarJS) {
+    window.cargarJS(badge_startIndexPath, onReady);
+    return;
+  }
+  const startIndexScript = document.createElement("script");
+  startIndexScript.src = badge_startIndexPath;
+  startIndexScript.onload = onReady;
   document.body.appendChild(startIndexScript);
 }
 

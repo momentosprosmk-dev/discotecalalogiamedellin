@@ -147,3 +147,7 @@
     transition: 0.3s;
   }
 }
+
+/* Pantallas mayores a 1024px (PC) */
+@media (min-width: 1025px) {
+}

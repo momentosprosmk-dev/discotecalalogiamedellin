@@ -39,17 +39,22 @@ function initBadgeLoginBanner() {
 
     banner.classList.remove("visible");
 
-    // Inyectar badgeStartIndex.js directamente
-    const startIndexScript = document.createElement("script");
-    startIndexScript.src = badgeStartIndexPath;
-    startIndexScript.onload = () => {
+    // Inyectar badgeStartIndex.js sin duplicar
+    const onReady = () => {
       if (typeof loadUserPage === "function") {
         loadUserPage();
       } else {
         console.error("No se encontró la función loadUserPage en badgeStartIndex.js");
       }
     };
-    document.body.appendChild(startIndexScript);
+    if (window.cargarJS) {
+      window.cargarJS(badgeStartIndexPath, onReady);
+    } else {
+      const startIndexScript = document.createElement("script");
+      startIndexScript.src = badgeStartIndexPath;
+      startIndexScript.onload = onReady;
+      document.body.appendChild(startIndexScript);
+    }
   });
 }
 

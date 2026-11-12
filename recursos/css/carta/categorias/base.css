@@ -98,7 +98,7 @@ body {
 }
 
 /* Pantallas mayores a 1024px (PC) */
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   body {
     height: auto;
     display: block;

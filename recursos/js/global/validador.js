@@ -60,11 +60,16 @@ async function validarMarketing() {
 
     localStorage.setItem("avisoHtml", htmlRuta);
 
-    const script = document.createElement("script");
-    script.src = `/recursos/js/marketing/banner.js`;
-    document.body.appendChild(script);
+    if (window.cargarJS) {
+      window.cargarJS(`/recursos/js/marketing/banner.js`);
+    } else if (!document.querySelector('script[src="/recursos/js/marketing/banner.js"]')) {
+      const script = document.createElement("script");
+      script.src = `/recursos/js/marketing/banner.js`;
+      document.body.appendChild(script);
+    }
   } else {
-    document.getElementById("marketing-container").style.display = "none";
+    const mktContainer = document.getElementById("marketing-container");
+    if (mktContainer) mktContainer.style.display = "none";
   }
 }
 
@@ -89,22 +94,36 @@ function iniciarBannerTyCLoad() {
         const logoImg = document.createElement("img");
         logoImg.src = window.bannerConfig.logoRuta;
         logoImg.alt = "MomentosPro";
+        logoImg.loading = "lazy";
+        logoImg.decoding = "async";
         containerLogo.appendChild(logoImg);
       }
 
-      const css = document.createElement("link");
-      css.rel = "stylesheet";
-      css.href = window.bannerConfig.cssRuta;
-      document.head.appendChild(css);
+      if (window.cargarCSS) {
+        window.cargarCSS(window.bannerConfig.cssRuta);
+      } else if (!document.querySelector(`link[href="${window.bannerConfig.cssRuta}"]`)) {
+        const css = document.createElement("link");
+        css.rel = "stylesheet";
+        css.href = window.bannerConfig.cssRuta;
+        document.head.appendChild(css);
+      }
 
-      const script = document.createElement("script");
-      script.src = "/smk/recursos/js/tyc/banner.js";
-      script.onload = () => {
-        if (typeof iniciarBannerTyC === "function") {
-          iniciarBannerTyC(window.tyc_fecha);
-        }
-      };
-      document.body.appendChild(script);
+      if (window.cargarJS) {
+        window.cargarJS("/smk/recursos/js/tyc/banner.js", () => {
+          if (typeof iniciarBannerTyC === "function") {
+            iniciarBannerTyC(window.tyc_fecha);
+          }
+        });
+      } else {
+        const script = document.createElement("script");
+        script.src = "/smk/recursos/js/tyc/banner.js";
+        script.onload = () => {
+          if (typeof iniciarBannerTyC === "function") {
+            iniciarBannerTyC(window.tyc_fecha);
+          }
+        };
+        document.body.appendChild(script);
+      }
     })
     .catch(err => console.error("Error cargando banner TyC:", err));
 }

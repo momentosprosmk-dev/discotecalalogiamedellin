@@ -23,12 +23,16 @@ async function cargarBanner() {
       const img = document.createElement("img");
       img.src = rutaImagen;
       img.alt = "Publicidad";
+      img.loading = "lazy";
+      img.decoding = "async";
       logoBanner.appendChild(img);
     }
 
     // Cargar siempre base.css
     const baseCss = `/recursos/css/marketing/base.css`;
-    if (!document.querySelector(`link[href="${baseCss}"]`)) {
+    if (window.cargarCSS) {
+      window.cargarCSS(baseCss);
+    } else if (!document.querySelector(`link[href="${baseCss}"]`)) {
       const linkBase = document.createElement("link");
       linkBase.rel = "stylesheet";
       linkBase.href = baseCss;
@@ -43,11 +47,15 @@ async function cargarBanner() {
       cssRuta = `/recursos/css/marketing/reservar.css`;
     }
 
-    if (cssRuta && !document.querySelector(`link[href="${cssRuta}"]`)) {
-      const link = document.createElement("link");
-      link.rel = "stylesheet";
-      link.href = cssRuta;
-      document.head.appendChild(link);
+    if (cssRuta) {
+      if (window.cargarCSS) {
+        window.cargarCSS(cssRuta);
+      } else if (!document.querySelector(`link[href="${cssRuta}"]`)) {
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = cssRuta;
+        document.head.appendChild(link);
+      }
     }
 
     // Mostrar banner

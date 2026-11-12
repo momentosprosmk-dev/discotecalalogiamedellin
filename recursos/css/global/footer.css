@@ -181,7 +181,7 @@ footer {
   }
 }
 /*Pantallas mayores a 1024px*/
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .footer-movil {
     display: none;
   }

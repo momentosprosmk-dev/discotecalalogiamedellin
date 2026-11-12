@@ -48,3 +48,29 @@
   });
 })();
 
+// Utilidad global: Inyectar CSS una única vez
+window.cargarCSS = function (href, mediaQuery) {
+  if (document.querySelector(`link[href="${href}"]`)) return;
+  const link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.href = href;
+  if (mediaQuery) link.media = mediaQuery;
+  document.head.appendChild(link);
+};
+
+// Utilidad global: Inyectar JS una única vez
+window.cargarJS = function (src, onReady) {
+  const existente = document.querySelector(`script[src="${src}"]`);
+  if (existente) {
+    if (typeof onReady === "function") onReady();
+    return;
+  }
+  const script = document.createElement("script");
+  script.src = src;
+  if (typeof onReady === "function") {
+    script.onload = onReady;
+  }
+  document.body.appendChild(script);
+};
+
+

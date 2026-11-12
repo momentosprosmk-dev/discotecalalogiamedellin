@@ -123,3 +123,10 @@
     display: none;
   }
 }
+
+/* Pantallas mayores a 1024px (PC) */
+@media (min-width: 1025px) {
+  .hero {
+    display: flex;
+  }
+}
