@@ -8,12 +8,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const zona = document.getElementById("zonaSeleccionada").value.trim();
     const nombre = document.getElementById("nombre").value.trim();
     const codigoPais = document.getElementById("codigoPais").value.trim();
+    const indicativoPais = document.getElementById("indicativoPais").value.trim();
     const contacto = document.getElementById("contacto").value.trim();
     const personas = document.getElementById("personas").value.trim();
     const fecha = document.getElementById("fecha").value.trim();
 
-    // Todos los campos obligatorios deben estar llenos
-    const valido = zona && nombre && codigoPais && contacto && personas && fecha;
+    // Todos los campos obligatorios deben estar llenos (incluyendo indicativo de país válido)
+    const valido = zona && nombre && codigoPais && indicativoPais && contacto && personas && fecha;
 
     if (valido) {
       submitBtn.classList.remove("inactivo");

@@ -11,7 +11,7 @@
     "numero-local": "573202877325",
   };
 
-  const dominiosExternos = new Set();
+  const dominiosExternos = new Set(["https://docs.google.com"]);
   Object.values(window.enlaces).forEach(valor => {
     if (typeof valor === "string" && valor.startsWith("https")) {
       try {

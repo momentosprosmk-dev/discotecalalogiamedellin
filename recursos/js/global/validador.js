@@ -28,6 +28,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Función para Banner de Marketing
 async function validarMarketing() {
+  const mktContainer = document.getElementById("marketing-container");
+  if (!mktContainer || typeof baseIndex === "undefined") {
+    if (mktContainer) mktContainer.style.display = "none";
+    return;
+  }
+
+  const cacheKey = `mkt_check_${baseIndex}`;
+  const cached = sessionStorage.getItem(cacheKey);
+  if (cached !== null) {
+    if (cached === "none") {
+      mktContainer.style.display = "none";
+      return;
+    }
+    try {
+      const { encontrado, htmlRuta } = JSON.parse(cached);
+      localStorage.setItem("avisoPatch", encontrado);
+      localStorage.setItem("avisoHtml", htmlRuta);
+      if (window.cargarJS) {
+        window.cargarJS(`/recursos/js/marketing/banner.js`);
+      }
+      return;
+    } catch (e) {
+      sessionStorage.removeItem(cacheKey);
+    }
+  }
+
   const archivos = [
     `https://momentosprosmk-dev.github.io/discotecalalogiamedellin-media/recursos/media/marketing/${baseIndex}.1.avif`,
     `https://momentosprosmk-dev.github.io/discotecalalogiamedellin-media/recursos/media/marketing/${baseIndex}.2.avif`
@@ -59,6 +85,7 @@ async function validarMarketing() {
     }
 
     localStorage.setItem("avisoHtml", htmlRuta);
+    sessionStorage.setItem(cacheKey, JSON.stringify({ encontrado, htmlRuta }));
 
     if (window.cargarJS) {
       window.cargarJS(`/recursos/js/marketing/banner.js`);
@@ -68,8 +95,8 @@ async function validarMarketing() {
       document.body.appendChild(script);
     }
   } else {
-    const mktContainer = document.getElementById("marketing-container");
-    if (mktContainer) mktContainer.style.display = "none";
+    sessionStorage.setItem(cacheKey, "none");
+    mktContainer.style.display = "none";
   }
 }
 

@@ -29,9 +29,19 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
+  const cacheKey = "html_cache_footer_pc";
+  const cachedHtml = sessionStorage.getItem(cacheKey);
+  if (cachedHtml) {
+    footerPc.innerHTML = cachedHtml;
+    initFooter();
+    initFooterSocial();
+    return;
+  }
+
   fetch("/recursos/html/global/footer_pc.html")
     .then((response) => response.text())
     .then((data) => {
+      sessionStorage.setItem(cacheKey, data);
       footerPc.innerHTML = data;
       initFooter();
       initFooterSocial();

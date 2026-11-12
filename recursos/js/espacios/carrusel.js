@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!banner) return;
       const titulo = banner.querySelector(".titulo-banner")?.textContent || "";
       localStorage.setItem("zonaSeleccionada", titulo);
-      window.open("../../formularios/reservar.html", "_blank");
+      window.open("/formularios/reservar/", "_blank");
     });
   });
 });

@@ -32,8 +32,11 @@ function initContactoBanner() {
   });
 
   document.getElementById("btn-instagram")?.addEventListener("click", () => {
-    console.log("Instagram:", window.enlaces?.["btn-instagram"]);
     if (window.enlaces?.["btn-instagram"]) location.href = window.enlaces["btn-instagram"];
+  });
+
+  document.getElementById("btn-tiktok")?.addEventListener("click", () => {
+    if (window.enlaces?.["btn-tiktok"]) location.href = window.enlaces["btn-tiktok"];
   });
 }
 
