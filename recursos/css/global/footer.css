@@ -159,6 +159,12 @@ footer {
   border-radius: 50%;
   transition: all 0.3s ease;
 }
+.footer-social a svg {
+  width: 32px;
+  height: 32px;
+  fill: currentColor;
+  display: block;
+}
 /*Redes sociales | Botones | Hover*/
 .footer-social a:hover {
   color: var(--rojo);

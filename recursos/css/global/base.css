@@ -40,6 +40,11 @@ html {
   background-color: #000000;
   color: #000000;
   font-family: var(--font-family);
+  touch-action: pan-x pan-y;
+}
+
+body {
+  touch-action: pan-x pan-y;
 }
 
 /* --- RESPONSIVE --- */

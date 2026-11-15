@@ -28,3 +28,46 @@
   border-radius: 6px;
 }
 
+/* Contenedor de botones en banners QR */
+.qr-acciones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.qr-acciones .btn-cerrar {
+  margin-top: 0;
+}
+
+/* Botón de acción secundaria (Copiar contraseña / Compartir enlace) */
+.btn-accion-qr {
+  width: 85%;
+  max-width: 260px;
+  background: linear-gradient(135deg, #161616, #262626);
+  color: var(--blanco);
+  border: 1px solid var(--rojo-oscuro);
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.6);
+  transition: all 0.3s ease;
+}
+
+.btn-accion-qr:hover {
+  background: linear-gradient(135deg, #222, var(--gris-oscuro));
+  border-color: var(--rojo);
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(255,0,0,0.5), 0 4px 12px rgba(0,0,0,0.8);
+}
+
+.btn-accion-qr.copiado {
+  background: linear-gradient(135deg, #14532d, #16a34a);
+  border-color: #22c55e;
+  color: #ffffff;
+}
+

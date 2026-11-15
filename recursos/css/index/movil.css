@@ -34,24 +34,25 @@
   width: 100%;
   height: fit-content;
   overflow: hidden;
+  position: relative;
+  touch-action: pan-y;
 }
 /* Imagen con zoom (estado normal) */
 .imagen-zoom {
   width: 100%;
   height: auto;
-  transition: transform 0.3s ease;
+  display: block;
+  transform-origin: 0 0;
+  transition: transform 0.25s ease-out;
   cursor: zoom-in;
   transform: none;
+  will-change: transform;
+  user-select: none;
+  -webkit-user-drag: none;
 }
-/* Estado ampliado con doble clic/doble toque */
+/* Estado ampliado con doble clic/doble toque o pellizco */
 .imagen-zoom.zoomed {
-  transform: scale(2);
   cursor: grab;
-}
-/* Cuando hay zoom, permitir scroll en ambas direcciones */
-.zoom-container:has(.imagen-zoom.zoomed) {
-  overflow-x: auto;
-  overflow-y: auto;
 }
 
 /* --- RESPONSIVE --- */

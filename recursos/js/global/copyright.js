@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  const cacheKey = "html_cache_footer_pc";
+  const cacheKey = "html_cache_footer_pc_v3";
   const cachedHtml = sessionStorage.getItem(cacheKey);
   if (cachedHtml) {
     footerPc.innerHTML = cachedHtml;
