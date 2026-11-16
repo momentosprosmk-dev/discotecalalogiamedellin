@@ -284,29 +284,6 @@ document.addEventListener("DOMContentLoaded", function () {
       headerSabores.innerHTML = `<h2><span class="dorado">SABORES</span> DISPONIBLES</h2>`;
       fragment.appendChild(headerSabores);
 
-      // Guía rápida para combinar hasta 2 sabores (ej. Sandía + Menta)
-      const guiaMezcla = document.createElement("div");
-      guiaMezcla.className = "hookah-guia-mezcla";
-      guiaMezcla.innerHTML =
-        `💨 Pide <strong>1 sabor puro</strong> o combina hasta <strong>2 sabores disponibles</strong> ` +
-        `<em>(Ej: Sandía + Menta = Sandía Mentolada)</em>`;
-      fragment.appendChild(guiaMezcla);
-
-      // Barra de resumen interactivo de selección
-      const barraResumen = document.createElement("div");
-      barraResumen.id = "hookah-resumen-seleccion";
-      barraResumen.className = "hookah-resumen-seleccion";
-      barraResumen.innerHTML = `
-        <div id="hookah-resumen-texto" class="hookah-resumen-texto"></div>
-        <button type="button" id="hookah-resumen-limpiar" class="hookah-resumen-limpiar">Limpiar</button>
-      `;
-      barraResumen.querySelector("#hookah-resumen-limpiar").addEventListener("click", () => {
-        opcionSeleccionada = null;
-        saboresSeleccionados = [];
-        actualizarEstadoVisualSeleccion(menu);
-      });
-      fragment.appendChild(barraResumen);
-
       // Grid de 3 columnas: FRUTALES | MENTOLADOS | ESPECIALES
       const gridSabores = document.createElement("div");
       gridSabores.className = "hookah-sabores-grid";
@@ -371,6 +348,31 @@ document.addEventListener("DOMContentLoaded", function () {
       fragment.appendChild(gridSabores);
     }
 
+    // ==================== BARRA FIJA INFERIOR (GUÍA INICIAL ↔ RESUMEN DE SELECCIÓN) ====================
+    if (opciones.length > 0 || totalSabores > 0) {
+      const guiaMezcla = document.createElement("div");
+      guiaMezcla.id = "hookah-guia-mezcla";
+      guiaMezcla.className = "hookah-guia-mezcla visible";
+      guiaMezcla.innerHTML =
+        `💨 Pide <strong>1 sabor puro</strong> o combina hasta <strong>2 sabores disponibles</strong> ` +
+        `<em>(Ej: Sandía + Menta = Sandía Mentolada)</em>`;
+      fragment.appendChild(guiaMezcla);
+
+      const barraResumen = document.createElement("div");
+      barraResumen.id = "hookah-resumen-seleccion";
+      barraResumen.className = "hookah-resumen-seleccion";
+      barraResumen.innerHTML = `
+        <div id="hookah-resumen-texto" class="hookah-resumen-texto"></div>
+        <button type="button" id="hookah-resumen-limpiar" class="hookah-resumen-limpiar">Limpiar</button>
+      `;
+      barraResumen.querySelector("#hookah-resumen-limpiar").addEventListener("click", () => {
+        opcionSeleccionada = null;
+        saboresSeleccionados = [];
+        actualizarEstadoVisualSeleccion(menu);
+      });
+      fragment.appendChild(barraResumen);
+    }
+
     menu.appendChild(fragment);
     actualizarEstadoVisualSeleccion(menu);
   };
@@ -386,14 +388,20 @@ document.addEventListener("DOMContentLoaded", function () {
       item.classList.toggle("seleccionado", activo);
     });
 
+    const guiaMezcla = contenedor.querySelector("#hookah-guia-mezcla");
     const barraResumen = contenedor.querySelector("#hookah-resumen-seleccion");
     const textoResumen = contenedor.querySelector("#hookah-resumen-texto");
     if (!barraResumen || !textoResumen) return;
 
-    if (!opcionSeleccionada && saboresSeleccionados.length === 0) {
+    const haySeleccion = Boolean(opcionSeleccionada) || saboresSeleccionados.length > 0;
+
+    if (!haySeleccion) {
       barraResumen.classList.remove("visible");
+      if (guiaMezcla) guiaMezcla.classList.add("visible");
       return;
     }
+
+    if (guiaMezcla) guiaMezcla.classList.remove("visible");
 
     const partes = [];
     if (opcionSeleccionada) {
